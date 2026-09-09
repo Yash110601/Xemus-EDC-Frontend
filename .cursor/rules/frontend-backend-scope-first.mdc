@@ -1,0 +1,70 @@
+---
+description: Classify every prompt as frontend vs backend before acting; this repo is the Next.js frontend only.
+alwaysApply: true
+---
+
+# Frontend vs Backend — Scope First (Mandatory)
+
+Before implementing, editing, or deeply answering **any** user prompt, determine **where the work belongs**.
+
+## This repository
+
+| Repo | Stack | Owns |
+|------|--------|------|
+| **Xemus-EDC-Frontend** (this repo) | Next.js, `app/`, `components/`, `lib/services/` | UI, routing, client state, API wrappers, browser rule runtime |
+| **Xemus-EDC-Backend** (sibling repo) | .NET Core 8 API (`Pr.Edc.*`) | DB, business rules on save, permissions, exports, audit, email, new endpoints |
+
+Do **not** implement backend persistence, new API controllers, EF migrations, or server-only validation in this frontend repo unless the user explicitly asks for a **frontend-only stub/mock** for local dev.
+
+## First step on every prompt
+
+1. **Classify**: `Frontend only` | `Backend only` | `Both (hybrid)` | `Unclear`
+2. **State it briefly** in the response (one line is enough before BA/Dev analysis when rules require that structure).
+3. **Act only in the correct repo/layer.**
+
+## Quick decision tree
+
+```
+Needs DB / new API / save enforcement / export file / email / audit write?
+  → Backend (or Both if UI also needed)
+
+UI, layout, navigation, localStorage, charts, client filters, animations?
+  → Frontend
+
+Rules stored in API but evaluated in browser on eCRF?
+  → Both (store = backend, runtime display = frontend)
+```
+
+## Wrong-repo behavior (stop and redirect)
+
+If the user asks for work that belongs in the **backend** but the open workspace is **this frontend repo**:
+
+- Do **not** pretend to implement API/DB changes here.
+- Say clearly: *"This is backend work — use the .NET API repo."*
+- Optionally list what the **frontend** would need **after** the API exists (`lib/api/config.js` endpoint, `lib/services/*.js`, page UI).
+- If the user only needs FE consumption of an **existing** endpoint, proceed in this repo.
+
+If the user asks for **frontend-only** work (design, components, dashboard) while describing backend files, implement in this repo and ignore backend paths.
+
+## Hybrid tasks — order of work
+
+1. Backend contract (endpoint + DTO) — in **backend repo**
+2. `lib/api/config.js` + `lib/services/` — in **this repo**
+3. UI in `app/` + `components/` — in **this repo**
+
+Frontend-only tasks may ship without backend changes when existing APIs already support the feature.
+
+## Examples
+
+| Prompt | Scope | Where to work |
+|--------|--------|----------------|
+| "Redesign dashboard KPI strip" | Frontend | This repo |
+| "Add PI sign-off API and DB fields" | Backend | .NET repo |
+| "Show PI sign-off badge on eCRF" | Both | API first, then this repo |
+| "Fix sidebar menu for Super Admin" | Frontend | This repo (`sidebar`, auth menu) |
+| "Auto-close query when validation passes" | Backend | .NET repo (frontend displays result) |
+| "New report export column" | Both | Backend export + frontend table column |
+
+## When unclear
+
+Ask one targeted question: *"Should this change live in the frontend repo, the .NET backend, or both?"* — do not assume backend work in this repo.

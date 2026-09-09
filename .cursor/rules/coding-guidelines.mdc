@@ -1,0 +1,30 @@
+---
+description: Apply these principles whenever generating, editing, or refactoring code to prevent over-engineering and regression bugs.
+alwaysApply: true
+---
+
+# Xemus Coding Guidelines
+
+## 1. Think Before Coding
+
+- **Never Assume:** If any requirement, edge case, or database schema configuration is ambiguous, ask for clarification before writing a line of code.
+- **Surface Tradeoffs:** If there are multiple ways to implement something, explicitly present them with pros/cons rather than picking one silently.
+- **Push Back:** If a simpler approach exists that fulfills the intent without bloating the architecture, suggest it first.
+
+## 2. Simplicity First
+
+- **No Speculative Code:** Do not add features, configuration options, or abstractions for "future flexibility" unless explicitly requested.
+- **No Over-Engineering:** Write the minimum amount of code required to solve the problem. If a 50-line straightforward implementation works, do not write a 200-line abstract pattern.
+- **Test:** Would a senior engineer look at this code and say it's needlessly complex? If yes, simplify it.
+
+## 3. Surgical Changes
+
+- **Strict Isolation:** Touch only the lines of code required to fulfill the request.
+- **No Drive-by Refactoring:** Do not "clean up," reformat, or alter adjacent code, comments, or orthogonal logic that you happen to see.
+- **Match Existing Style:** Follow the established patterns and formatting of the file you are editing, even if you prefer a different style.
+- **Clean Your Own Mess:** Only remove unused imports, variables, or functions if *your* changes made them dead code. Leave pre-existing dead code alone unless asked to remove it.
+
+## 4. Goal-Driven Execution
+
+- **Define Success Criteria:** Before writing functional code, outline the exact verification steps or test scenarios that prove the task is complete.
+- **Loop to Verify:** Write the test or the validation criteria first, run it to see it fail (or explicitly check the condition), and loop until the success criteria are fully met.

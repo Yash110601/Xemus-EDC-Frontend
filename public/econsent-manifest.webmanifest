@@ -1,0 +1,19 @@
+{
+  "name": "Xemus eCONSENT",
+  "short_name": "eCONSENT",
+  "description": "Tablet-friendly informed consent for clinical research participants",
+  "start_url": "/participant/consent",
+  "scope": "/participant/",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#f8fafc",
+  "theme_color": "#0f766e",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

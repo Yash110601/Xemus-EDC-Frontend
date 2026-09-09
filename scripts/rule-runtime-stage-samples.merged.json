@@ -1,0 +1,151 @@
+{
+  "stageSamples": {
+    "evaluate": [
+      {
+        "durationMs": 5.9,
+        "sourceFile": "sample-a.json"
+      },
+      {
+        "durationMs": 6.4,
+        "sourceFile": "sample-a.json"
+      },
+      {
+        "durationMs": 7.2,
+        "sourceFile": "sample-a.json"
+      },
+      {
+        "durationMs": 6.1,
+        "sourceFile": "sample-a.json"
+      },
+      {
+        "durationMs": 6.8,
+        "sourceFile": "sample-b.json"
+      },
+      {
+        "durationMs": 7.1,
+        "sourceFile": "sample-b.json"
+      },
+      {
+        "durationMs": 6.6,
+        "sourceFile": "sample-b.json"
+      }
+    ],
+    "apply": [
+      {
+        "durationMs": 3.2,
+        "sourceFile": "sample-a.json"
+      },
+      {
+        "durationMs": 3.8,
+        "sourceFile": "sample-a.json"
+      },
+      {
+        "durationMs": 4.1,
+        "sourceFile": "sample-a.json"
+      },
+      {
+        "durationMs": 4.6,
+        "sourceFile": "sample-a.json"
+      },
+      {
+        "durationMs": 3.9,
+        "sourceFile": "sample-b.json"
+      },
+      {
+        "durationMs": 4.4,
+        "sourceFile": "sample-b.json"
+      },
+      {
+        "durationMs": 4.2,
+        "sourceFile": "sample-b.json"
+      }
+    ],
+    "render": [
+      {
+        "durationMs": 8.7,
+        "sourceFile": "sample-a.json"
+      },
+      {
+        "durationMs": 9.6,
+        "sourceFile": "sample-a.json"
+      },
+      {
+        "durationMs": 10.2,
+        "sourceFile": "sample-a.json"
+      },
+      {
+        "durationMs": 9.1,
+        "sourceFile": "sample-a.json"
+      },
+      {
+        "durationMs": 9.9,
+        "sourceFile": "sample-b.json"
+      },
+      {
+        "durationMs": 10.4,
+        "sourceFile": "sample-b.json"
+      },
+      {
+        "durationMs": 9.7,
+        "sourceFile": "sample-b.json"
+      }
+    ]
+  },
+  "meta": {
+    "mergedAt": "2026-04-17T13:01:45.141Z",
+    "sourceFiles": [
+      "scripts\\stage-samples-batch\\sample-a.json",
+      "scripts\\stage-samples-batch\\sample-b.json"
+    ],
+    "overall": {
+      "evaluate": {
+        "count": 7,
+        "avgMs": 6.59,
+        "p50Ms": 6.6,
+        "p95Ms": 7.2,
+        "maxMs": 7.2
+      },
+      "apply": {
+        "count": 7,
+        "avgMs": 4.03,
+        "p50Ms": 4.1,
+        "p95Ms": 4.6,
+        "maxMs": 4.6
+      },
+      "render": {
+        "count": 7,
+        "avgMs": 9.66,
+        "p50Ms": 9.7,
+        "p95Ms": 10.4,
+        "maxMs": 10.4
+      }
+    },
+    "breakdownByStudyForm": [
+      {
+        "studyId": "unknown_study",
+        "formId": "unknown_form",
+        "evaluate": {
+          "count": 7,
+          "avgMs": 6.59,
+          "p50Ms": 6.6,
+          "p95Ms": 7.2,
+          "maxMs": 7.2
+        },
+        "apply": {
+          "count": 7,
+          "avgMs": 4.03,
+          "p50Ms": 4.1,
+          "p95Ms": 4.6,
+          "maxMs": 4.6
+        },
+        "render": {
+          "count": 7,
+          "avgMs": 9.66,
+          "p50Ms": 9.7,
+          "p95Ms": 10.4,
+          "maxMs": 10.4
+        }
+      }
+    ]
+  }
+}

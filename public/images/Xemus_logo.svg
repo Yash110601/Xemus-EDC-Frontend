@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 112" fill="none" role="img" aria-label="Xemus">
+  <title>Xemus</title>
+  <defs>
+    <linearGradient id="barNavy" x1="24" y1="24" x2="88" y2="88" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0F2744"/>
+      <stop offset="1" stop-color="#1B3F63"/>
+    </linearGradient>
+    <linearGradient id="barTeal" x1="24" y1="88" x2="88" y2="24" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0F766E"/>
+      <stop offset="1" stop-color="#2DD4BF"/>
+    </linearGradient>
+  </defs>
+
+  <!-- X mark -->
+  <g transform="translate(8 6)">
+    <rect x="8" y="38" width="84" height="24" rx="12" transform="rotate(-45 50 50)" fill="url(#barNavy)"/>
+    <rect x="8" y="38" width="84" height="24" rx="12" transform="rotate(45 50 50)" fill="url(#barTeal)"/>
+    <rect x="38" y="38" width="24" height="24" rx="5" transform="rotate(45 50 50)" fill="#10B981"/>
+  </g>
+
+  <!-- Wordmark -->
+  <text
+    x="124"
+    y="74"
+    fill="#0F2744"
+    font-family="ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+    font-size="52"
+    font-weight="700"
+    letter-spacing="-1.5"
+  >Xemus</text>
+</svg>

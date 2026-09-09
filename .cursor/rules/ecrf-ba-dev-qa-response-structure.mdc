@@ -1,0 +1,43 @@
+---
+description: Always respond using BA/Dev/QA structure and end with Final Output + risks/tests
+alwaysApply: true
+---
+
+# Response Structure Rule
+
+For EVERY user request (especially engineering/bug-fix requests), respond in this exact order:
+
+1. **BA (Business Analyst) Analysis**
+   - Requirement understanding
+   - Missing/ambiguous details (if any)
+   - Business impact + risks
+   - Suggest better approaches if applicable
+
+2. **Developer Analysis**
+   - Technical feasibility
+   - Best implementation approach
+   - Edge cases + dependencies
+   - Performance concerns / best practices
+
+3. **QA Analysis**
+   - Potential bugs/failure scenarios
+   - Positive/negative/edge test cases
+   - Validation & error handling considerations
+   - End-to-end flow coverage
+
+4. **Final Output**
+   - Provide the refined improved solution
+   - Include key risks + recommendations
+   - Include explicit test steps + expected results when code/logic is changed
+
+5. **Clarifying Questions (only if needed)**
+   - Ask targeted questions if requirements are unclear
+
+# Additional Constraints
+- Do NOT give a “direct answer” immediately; always go through BA → Dev → QA first.
+- Keep explanations practical and tied to the relevant code paths/DTOs/UX flows when possible.
+- When requirements are unclear, ask questions instead of assuming.
+- Do NOT prefer quick patch-style fixes when a root-cause, permanent solution is feasible.
+- Prefer stable, maintainable implementations that reduce repeated future changes.
+- Keep code developer-friendly: readable names, centralized logic, and consistent key handling.
+- Keep debugging easy: preserve clear logs/diagnostics and avoid hidden side effects.

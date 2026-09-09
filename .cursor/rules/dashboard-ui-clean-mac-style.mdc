@@ -1,0 +1,13 @@
+---
+description: Enforce clean premium dashboard UI style
+alwaysApply: true
+---
+
+# Dashboard UI Design Rule
+
+- For dashboard KPI chips/cards, keep values clean and minimal.
+- Do not append inline percentage text in metric chips (example: avoid `1 (1%)`) unless user explicitly asks.
+- Prefer premium MacBook-like visuals: soft glass surfaces, subtle shadows, clean spacing, and restrained accents.
+- Keep typography hierarchy clear: short labels, strong value, low-noise supporting text.
+- Match existing project color system; avoid random or mismatched palette choices.
+- When refining dashboard design, preserve business logic and API behavior; change only presentation unless requested.

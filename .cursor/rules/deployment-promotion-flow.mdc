@@ -1,0 +1,23 @@
+---
+description: Enforce branch promotion path for deployments
+alwaysApply: true
+---
+
+# Deployment Promotion Flow
+
+Use this branch flow for every release:
+
+- Feature/dev branches must promote to `master` first.
+- UAT deployment must come only from a PR with `base=UAT` and `head=master`.
+- Production deployment must come only from a PR with `base=PROD` and `head=UAT`.
+
+# PR Rules
+
+- Do not create direct PRs from feature branches to `UAT` or `PROD`.
+- If asked to deploy to UAT, ensure `master` contains the latest approved commit, then create/merge `master -> UAT`.
+- If asked to deploy to PROD, ensure `UAT` contains the approved release, then create/merge `UAT -> PROD`.
+
+# Agent Behavior
+
+- Before creating a deployment PR, verify source and target branches match this policy.
+- If requested flow violates this policy, warn and redirect to the correct promotion path.

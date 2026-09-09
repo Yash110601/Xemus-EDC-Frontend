@@ -1,0 +1,50 @@
+.pageBackground {
+  background: linear-gradient(to bottom right, rgba(147, 197, 253, 0.05), rgba(251, 191, 36, 0.05), rgba(219, 39, 119, 0.05));
+  min-height: 100vh;
+  margin: -1.5rem;
+  padding: 1.5rem;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.6s ease-out forwards;
+  opacity: 0;
+}
+
+.animate-slide-up {
+  animation: slide-up 0.6s ease-out forwards;
+  opacity: 0;
+}
+
+.animate-delay-1 {
+  animation-delay: 0.1s;
+}
+
+.animate-delay-2 {
+  animation-delay: 0.2s;
+}
+
+.animate-delay-3 {
+  animation-delay: 0.3s;
+}

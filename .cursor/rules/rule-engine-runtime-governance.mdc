@@ -1,0 +1,29 @@
+---
+description: Guardrails for eCRF rule-engine runtime architecture and rollout
+globs: {lib/rule-engine/**/*.js,app/ecrf-data-entry/manually/page.jsx,components/crf-designer/**/*.js,components/crf-designer/**/*.jsx}
+alwaysApply: false
+---
+
+# Rule Engine Runtime Governance
+
+- Keep business-rule execution in `lib/rule-engine/*`; UI files should consume patch outputs, not embed new rule side effects.
+- Preserve deterministic conflict policy: priority, compile order, then rule id; do not add non-deterministic merges.
+- Keep directional dependency behavior for date rules (source -> dependent), and avoid bi-directional wipes.
+- Any rollout change must honor feature gates from `readRuleRuntimeRolloutConfig()` and keep safe fallback behavior.
+- Do not bypass compare/parity reporting when changing runtime application logic.
+
+## Required checks before finishing changes
+
+1. Run lints on touched files.
+2. Verify shadow mode still logs parity + perf.
+3. Verify pilot/primary controls still respect form/study scopes.
+4. Verify `window` helpers still exist for QA operations.
+
+## Mandatory browser helpers (do not remove)
+
+- `window.__crfRuleRuntimeSetMode(...)`
+- `window.__crfRuleRuntimeClearMode()`
+- `window.__crfRuleRuntimeGetMode()`
+- `window.__crfRuleRuntimeDownloadLastParityReport()`
+- `window.__crfRuleRuntimeGetMismatchSamples()`
+- `window.__crfRuleRuntimeFlushMismatchSamples()`

@@ -1,0 +1,22 @@
+{
+  "stageSamples": {
+    "evaluate": [
+      { "durationMs": 5.9 },
+      { "durationMs": 6.4 },
+      { "durationMs": 7.2 },
+      { "durationMs": 6.1 }
+    ],
+    "apply": [
+      { "durationMs": 3.2 },
+      { "durationMs": 3.8 },
+      { "durationMs": 4.1 },
+      { "durationMs": 4.6 }
+    ],
+    "render": [
+      { "durationMs": 8.7 },
+      { "durationMs": 9.6 },
+      { "durationMs": 10.2 },
+      { "durationMs": 9.1 }
+    ]
+  }
+}

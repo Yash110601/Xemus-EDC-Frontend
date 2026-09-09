@@ -1,0 +1,91 @@
+{
+  "generatedAt": "2026-04-17T13:01:45.849Z",
+  "source": "input",
+  "options": {
+    "maxBreachRatePct": 10,
+    "p95HeadroomMs": 0,
+    "requireGroupPass": true
+  },
+  "overall": [
+    {
+      "stage": "evaluate",
+      "count": 7,
+      "p50Ms": 6.6,
+      "p95Ms": 7.2,
+      "avgMs": 6.59,
+      "budgetMs": 8,
+      "breaches": 0,
+      "breachRate": 0,
+      "p95LimitMs": 8,
+      "p95Pass": true,
+      "breachPass": true,
+      "pass": true
+    },
+    {
+      "stage": "apply",
+      "count": 7,
+      "p50Ms": 4.1,
+      "p95Ms": 4.6,
+      "avgMs": 4.03,
+      "budgetMs": 5,
+      "breaches": 0,
+      "breachRate": 0,
+      "p95LimitMs": 5,
+      "p95Pass": true,
+      "breachPass": true,
+      "pass": true
+    },
+    {
+      "stage": "render",
+      "count": 7,
+      "p50Ms": 9.7,
+      "p95Ms": 10.4,
+      "avgMs": 9.66,
+      "budgetMs": 12,
+      "breaches": 0,
+      "breachRate": 0,
+      "p95LimitMs": 12,
+      "p95Pass": true,
+      "breachPass": true,
+      "pass": true
+    }
+  ],
+  "groups": [
+    {
+      "studyId": "unknown_study",
+      "formId": "unknown_form",
+      "stage": "evaluate",
+      "count": 7,
+      "p50Ms": 6.6,
+      "avgMs": 6.59,
+      "p95Ms": 7.2,
+      "budgetMs": 8,
+      "p95LimitMs": 8,
+      "pass": true
+    },
+    {
+      "studyId": "unknown_study",
+      "formId": "unknown_form",
+      "stage": "apply",
+      "count": 7,
+      "p50Ms": 4.1,
+      "avgMs": 4.03,
+      "p95Ms": 4.6,
+      "budgetMs": 5,
+      "p95LimitMs": 5,
+      "pass": true
+    },
+    {
+      "studyId": "unknown_study",
+      "formId": "unknown_form",
+      "stage": "render",
+      "count": 7,
+      "p50Ms": 9.7,
+      "avgMs": 9.66,
+      "p95Ms": 10.4,
+      "budgetMs": 12,
+      "p95LimitMs": 12,
+      "pass": true
+    }
+  ]
+}

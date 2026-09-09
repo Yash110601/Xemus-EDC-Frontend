@@ -1,0 +1,33 @@
+---
+description: Global no-regression safety for all code edits
+alwaysApply: true
+---
+
+# Global No-Regression Guard
+
+For every code change in this repository, prioritize behavior preservation and avoid accidental logic loss.
+
+## Non-Negotiable Rules
+
+- Do not remove existing logic/branches unless the user explicitly asks for removal.
+- Do not silently change feature behavior while doing UI/style/refactor tasks.
+- Treat every existing line as potentially intentional; verify before deleting/changing.
+- If uncertain about side effects, keep old behavior and add safe, minimal changes.
+
+## Mandatory Pre-Delivery Checklist (every change)
+
+1. Compare before/after behavior for the touched flow (not just compile/lint).
+2. Search for key functions/state/handlers in edited area and confirm they still exist.
+3. Ensure all prior triggers still execute (submit, save, modal, API call, state update).
+4. Run lints for edited files; fix introduced issues.
+5. Summarize what was preserved and what changed.
+
+## Refactor Safety
+
+- Refactor in small steps and keep parity at each step.
+- When moving logic, preserve equivalent calls, conditions, and update paths.
+- Keep temporary logs around risky branches until behavior is confirmed.
+
+## Conflict Rule
+
+If a requested change appears to break existing working behavior, pause and confirm with the user before proceeding.

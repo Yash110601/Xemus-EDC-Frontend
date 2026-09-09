@@ -1,0 +1,33 @@
+---
+description: Enforce page-matched skeleton loaders for UI loading states
+alwaysApply: true
+---
+
+# UI Skeleton Loader Governance
+
+Use skeleton loaders for screen, section, table, card, modal, and panel loading states.
+
+## Required Behavior
+
+- Do not use spinner-only loading blocks for page-level or modal-level loading.
+- Match skeleton structure to the target UI (headers, cards, table columns, action cells, badges, form rows).
+- Prefer shared skeleton components (`SectionSkeleton`, `DashboardPageSkeleton`, `PageLoader`) and extend variants when needed.
+- Keep business logic unchanged; only replace loading presentation unless explicitly requested.
+- Preserve accessibility on loader containers (`role="status"`, `aria-busy`, `aria-label`).
+
+## Spinner Usage Policy
+
+- Allowed only for micro-interactions: button submit, icon-only refresh, inline field action.
+- If loading blocks the main content area, use skeletons instead of only `Loader2`/`animate-spin`.
+
+## Implementation Notes
+
+- For new pages, add a loader variant that mirrors that page's final layout before merging.
+- For list/table screens, include row-shaped skeletons with realistic column proportions.
+- For modals/drawers, include skeletons for title, form fields, and action buttons.
+
+## Quick Check Before Delivery
+
+- Does each major loading state visually map to that page's design?
+- Is any full-content loading state still spinner-only?
+- Are existing API calls and state transitions preserved?

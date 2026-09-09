@@ -1,0 +1,7 @@
+.pageBackground {
+  background: linear-gradient(to bottom right, rgba(147, 197, 253, 0.05), rgba(251, 191, 36, 0.05), rgba(219, 39, 119, 0.05));
+  min-height: 100vh;
+  margin: -1.5rem;
+  padding: 1.5rem;
+}
+

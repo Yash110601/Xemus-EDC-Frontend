@@ -1,0 +1,32 @@
+---
+description: Report filter dropdowns must match Patient Details Report standard
+alwaysApply: true
+---
+
+# Report Filter Dropdown Standard
+
+All **Reports** filter dropdowns (including SDV Report) must use the same UI pattern as **Patient Details Report** (`app/reports/export-patient-details/page.jsx`).
+
+## Required pattern
+
+- Use shared classes from `lib/reports/studySitePatientReportUi.js`:
+  - `REPORT_SELECT_TRIGGER_CLASS`, `REPORT_SELECT_CONTENT_CLASS`, `REPORT_SELECT_ITEM_CLASS`, `REPORT_SELECT_SEARCH_INPUT_CLASS`
+- Use `components/reports/ReportFilterSelect.jsx` for searchable dropdowns (do not invent a new dropdown layout).
+- Inside `SelectContent`:
+  1. Sticky search row (`p-3 border-b`, magnifier + `Input` with `stopPropagation` on click/keydown)
+  2. Scrollable list wrapper: `REPORT_SELECT_SCROLL_LIST_CLASS` (`max-h-[300px] overflow-y-auto`)
+  3. Optional first item: `SelectItem value="all"` with label like `All Studies` / `All Sites` (not `Select Study` as a list row)
+- Study display names: `getStudyFilterDisplayName()` (protocol / name / fallback `Study {id}`)
+
+## Do not
+
+- Put `SelectItem` rows directly under `SelectContent` without the scroll wrapper
+- Use a different border, padding, or search-in-dropdown layout on one report only
+- Replace the standard Select with native `<select>` or custom popovers unless explicitly approved
+
+## Reference
+
+- Canonical implementation: `app/reports/export-patient-details/page.jsx` (Study + Site filters)
+- Shared component: `components/reports/ReportFilterSelect.jsx`
+- SDV Report filters: `components/reports/SdvReportFilters.jsx`
+- SDV Report page shell + results table: same as Audit Log (`REPORT_CARD_CLASS`, `REPORT_RESULTS_HEADER_CLASS`, `REPORT_TABLE_TH_CLASS` in `studySitePatientReportUi.js`)

@@ -1,0 +1,42 @@
+---
+description: Enforce safe git commit/PR release flow for all work
+alwaysApply: true
+---
+
+# Git Safe Release Enforcement
+
+Follow `docs/release/GIT_BRANCH_FLOW.md` for every commit, PR, and deployment promotion.
+
+## Branch Promotion Policy (Mandatory)
+
+- Feature/dev work: `jainish` -> `master`
+- UAT deployment: `master` -> `UAT`
+- PROD deployment: `UAT` -> `PROD`
+
+Never create direct PR:
+
+- `jainish` -> `UAT`
+- `jainish` -> `PROD`
+- `master` -> `PROD`
+
+## Commit Safety Checklist (Every Commit)
+
+1. Confirm branch and target are correct.
+2. Review changed files with `git status` and `git diff`.
+3. Stage only intended files.
+4. Recheck staged content with `git diff --staged`.
+5. Commit with clear message.
+6. Push to correct branch (no force push).
+
+## Pre-PR Verification (Mandatory)
+
+- `git diff origin/<target>...HEAD` must match expected scope.
+- `git log --oneline origin/<target>..HEAD` must contain only intended commits.
+- If anything looks unrelated, stop and fix before PR.
+
+## Hard Safety Rules
+
+- No force push to shared branches.
+- No destructive reset on shared branches.
+- No skip of CI/review on release promotions.
+- If branch flow request conflicts with policy, stop and redirect to valid path.

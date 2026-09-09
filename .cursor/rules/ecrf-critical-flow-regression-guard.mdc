@@ -1,0 +1,31 @@
+---
+description: Protect critical eCRF status-flow from regressions
+alwaysApply: true
+---
+
+# eCRF Critical Flow Guard
+
+When editing `app/ecrf-data-entry/manually/page.jsx` (or related submit/status flows), do not remove critical status/update logic unless explicitly requested.
+
+## Must Preserve
+
+- Patient status update integration path: `patientEnrolmentService.updatePatientStatus(...)`.
+- Last-visit submit guard/modal flow (`lastVisitModal` + final-status decision).
+- Pre-submit patient-status popups for screening/randomized CRFs.
+- Status mapping fields in patient objects (`currentStatusCode/currentStatusName` and patient status aliases).
+
+## Before Finishing Any Change
+
+1. Run a targeted search to confirm critical hooks still exist:
+   - `updatePatientStatus(`
+   - `lastVisitModal`
+   - `showScreeningFailedModal`
+   - `showRandomizedEnrolledModal`
+2. Verify submit flow still gates correctly for status `3` (Submit) and skip flags.
+3. Re-check edited files with lints and ensure no new diagnostics were introduced.
+
+## If Refactoring
+
+- Keep behavior parity first, then improve structure.
+- If moving logic, keep equivalent calls and state transitions.
+- Add concise console diagnostics around critical branches to simplify QA/debug.
