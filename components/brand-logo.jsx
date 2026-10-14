@@ -10,7 +10,7 @@ const HEIGHT = {
   card: "h-[3.75rem]",
 }
 
-/** AY monogram mark (inline SVG — crisp at any size). */
+/** Xemus mark (inline SVG — crisp at any size). */
 export function XemusMark({ className, variant = "color" }) {
   const fill = variant === "light" ? "#E8F7F5" : "#0F2744"
   const ink = variant === "light" ? "#0F2744" : "#FFFFFF"
@@ -26,22 +26,22 @@ export function XemusMark({ className, variant = "color" }) {
         textAnchor="middle"
         fill={ink}
         fontFamily="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif"
-        fontSize="32"
+        fontSize="15"
         fontWeight="800"
-        letterSpacing="-0.06em"
+        letterSpacing="-0.04em"
       >
-        AY
+        Xemus
       </text>
     </svg>
   )
 }
 
-/** Full lockup: AY mark + AY wordmark. */
+/** Full lockup: Xemus mark + Xemus wordmark. */
 export function XemusWordmark({ className, variant = "color", markClassName, textClassName }) {
   const textColor = variant === "light" ? "text-white" : "text-[#0F2744]"
 
   return (
-    <div className={cn("inline-flex items-center gap-2.5", className)} role="img" aria-label="AY">
+    <div className={cn("inline-flex items-center gap-2.5", className)} role="img" aria-label="Xemus">
       <XemusMark variant={variant} className={cn("h-9 w-9 shrink-0 sm:h-10 sm:w-10", markClassName)} />
       <span
         className={cn(
@@ -50,7 +50,7 @@ export function XemusWordmark({ className, variant = "color", markClassName, tex
           textClassName,
         )}
       >
-        AY
+        Xemus
       </span>
     </div>
   )

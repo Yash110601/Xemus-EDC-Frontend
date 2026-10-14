@@ -6,3 +6,6 @@
 - [2026-08-23](./2026-08-23.md) — IWRS sync visibility on Patient Enrolment when enabled
 - [2026-08-24](./2026-08-24.md) — eCRF Sign all ready PI when study bulk flag is on
 - [2026-08-25](./2026-08-25.md) — AY logo monogram for app chrome
+- 2026-09-09
+
+- [2026-10-14](./2026-10-14.md) — product name AY to Xemus
