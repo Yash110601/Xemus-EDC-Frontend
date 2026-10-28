@@ -84,7 +84,7 @@ function AgreementCreateContent() {
     handleInputChange("headerContent", html)
   }
 
-  // New agreement: pre-fill Xemus standard body format (minimal edits per study)
+  // New agreement: pre-fill Company standard body format (minimal edits per study)
   useEffect(() => {
     if (isEditMode || hasAppliedStandardTemplateRef.current) return
     if (!isAgreementContentEmpty(formData.headerContent)) return
@@ -644,7 +644,7 @@ function AgreementCreateContent() {
                       type="text"
                       value={formData.companyName}
                       onChange={(e) => handleInputChange("companyName", e.target.value)}
-                      placeholder="Xemus"
+                      placeholder="Company"
                       className={`w-full px-4 py-3 rounded-lg border-2 transition-all ${errors.companyName
                         ? "border-red-300 bg-red-50/50 focus:border-red-500"
                         : "border-slate-200 focus:border-blue-500 focus:ring-4 focus:ring-blue-100"
@@ -766,7 +766,7 @@ function AgreementCreateContent() {
                       type="button"
                       onClick={applyStandardAgreementContent}
                       className="inline-flex items-center gap-1.5 rounded-lg border border-emerald-200 bg-emerald-50 px-2.5 py-1.5 text-xs font-semibold text-emerald-700 hover:bg-emerald-100 transition-colors"
-                      title="Reset to Xemus EDC standard agreement text format"
+                      title="Reset to Company EDC standard agreement text format"
                     >
                       <RotateCcw className="w-3.5 h-3.5" />
                       Standard format
@@ -793,7 +793,7 @@ function AgreementCreateContent() {
                   </p>
                 )}
                 <p className="text-xs text-slate-500 mt-2">
-                  New agreements start with the Xemus standard template. Change company name above, then click <strong>Standard format</strong> to refresh the company name in the letter.
+                  New agreements start with the Company standard template. Change company name above, then click <strong>Standard format</strong> to refresh the company name in the letter.
                 </p>
               </div>
             </div>

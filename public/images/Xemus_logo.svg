@@ -1,5 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 112" fill="none" role="img" aria-label="Xemus">
-  <title>Xemus</title>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 112" fill="none" role="img" aria-label="Company">
+  <title>Company</title>
   <defs>
     <linearGradient id="barNavy" x1="24" y1="24" x2="88" y2="88" gradientUnits="userSpaceOnUse">
       <stop stop-color="#0F2744"/>
@@ -27,5 +27,5 @@
     font-size="52"
     font-weight="700"
     letter-spacing="-1.5"
-  >Xemus</text>
+  >Company</text>
 </svg>
