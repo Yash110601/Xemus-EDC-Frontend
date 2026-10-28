@@ -508,7 +508,7 @@ export default function TerminologyCodingInput({
             className={cn(
               "flex shrink-0 items-center justify-center border-l border-slate-200 bg-slate-50/90 text-slate-600",
               "transition-colors hover:bg-emerald-50 hover:text-emerald-800",
-              "focus:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-emerald-300",
+              "focus:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-violet-300",
               disabled && "pointer-events-none opacity-50",
               dense ? "w-8" : "w-10",
             )}

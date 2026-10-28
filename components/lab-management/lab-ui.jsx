@@ -88,7 +88,7 @@ export function LabModeSegment({ value, onChange }) {
           type="button"
           role="tab"
           aria-selected={value === key}
-          className={`flex-1 rounded-xl px-4 py-2.5 text-sm font-semibold tracking-tight transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500/40 ${
+          className={`flex-1 rounded-xl px-4 py-2.5 text-sm font-semibold tracking-tight transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500/40 ${
             value === key
               ? "bg-white text-slate-900 shadow-[0_4px_14px_-4px_rgba(15,23,42,0.2)] dark:bg-white/95 dark:text-slate-900"
               : "text-slate-600 hover:bg-white/50 hover:text-slate-900 dark:text-slate-400 dark:hover:bg-slate-700/50 dark:hover:text-slate-100"
@@ -472,7 +472,7 @@ export function LabStatusFilterTabs({ value, onChange, className }) {
             role="tab"
             aria-selected={value === key}
             className={cn(
-              "rounded-xl px-3 py-2 text-xs font-semibold tracking-tight transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500/40 sm:px-4 sm:text-sm",
+              "rounded-xl px-3 py-2 text-xs font-semibold tracking-tight transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500/40 sm:px-4 sm:text-sm",
               value === key
                 ? "bg-white text-slate-900 shadow-[0_4px_14px_-4px_rgba(15,23,42,0.2)] dark:bg-white/95 dark:text-slate-900"
                 : "text-slate-600 hover:bg-white/50 hover:text-slate-900 dark:text-slate-400 dark:hover:bg-slate-700/50 dark:hover:text-slate-100",
@@ -566,7 +566,7 @@ export function LabStatusSwitchWithConfirm({ checked, disabled, busy, rowLabel, 
             <Button
               type="button"
               disabled={confirming || pending === null}
-              className="inline-flex h-11 items-center gap-2 rounded-xl bg-emerald-600 px-6 font-semibold text-white hover:bg-emerald-700"
+              className="inline-flex h-11 items-center gap-2 rounded-xl bg-violet-600 px-6 font-semibold text-white hover:bg-emerald-700"
               onClick={async () => {
                 if (pending === null) return
                 setConfirming(true)

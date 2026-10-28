@@ -20,7 +20,7 @@ export default function EcrfMetricChip({ label, value, hint, icon: Icon, tone = 
         "rounded-2xl border px-3.5 py-3 text-left shadow-sm shadow-slate-900/5",
         TONE_CLASS[tone] ?? TONE_CLASS.neutral,
         onClick &&
-          "cursor-pointer transition hover:-translate-y-0.5 hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-300 focus-visible:ring-offset-1",
+          "cursor-pointer transition hover:-translate-y-0.5 hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-300 focus-visible:ring-offset-1",
         className,
       )}
     >

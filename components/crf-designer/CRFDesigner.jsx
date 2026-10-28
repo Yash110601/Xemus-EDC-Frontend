@@ -1966,7 +1966,7 @@ const CRFDesigner = ({ initialCRF = null, onSave, onCancel }) => {
       title: "Rule Assigned",
       description: `Rule "${ruleData.ruleName}" has been assigned to ${control.label || control.properties?.labelText || "control"}`,
       variant: "success",
-      className: "border-emerald-300 bg-gradient-to-br from-emerald-50 via-green-50 to-emerald-50 text-emerald-900 shadow-lg shadow-emerald-200/30",
+      className: "border-emerald-300 bg-gradient-to-br from-emerald-50 via-green-50 to-emerald-50 text-emerald-900 shadow-lg shadow-violet-200/30",
     })
   }
 
@@ -3026,7 +3026,7 @@ const CRFDesigner = ({ initialCRF = null, onSave, onCancel }) => {
                 onClick={() => setPreviewMode(false)}
                 variant="default"
                 size="sm"
-                className="bg-emerald-600 hover:bg-emerald-700 text-white"
+                className="bg-violet-600 hover:bg-violet-700 text-white"
               >
                 <Eye className="w-4 h-4 mr-2" />
                 Exit Preview

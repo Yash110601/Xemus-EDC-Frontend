@@ -1,5 +1,8 @@
 .pageBackground {
-  background: linear-gradient(to bottom right, rgba(147, 197, 253, 0.05), rgba(251, 191, 36, 0.05), rgba(219, 39, 119, 0.05));
+  background:
+    radial-gradient(ellipse 70% 50% at 0% 0%, rgba(167, 139, 250, 0.12), transparent 55%),
+    radial-gradient(ellipse 60% 45% at 100% 0%, rgba(124, 107, 181, 0.08), transparent 50%),
+    linear-gradient(180deg, #faf8fd 0%, #f3eef9 48%, #f7f4fc 100%);
   min-height: 100vh;
   margin: -1.5rem;
   padding: 1.5rem;

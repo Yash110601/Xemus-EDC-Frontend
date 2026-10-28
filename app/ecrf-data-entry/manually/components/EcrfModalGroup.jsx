@@ -64,7 +64,7 @@ const EcrfModalGroup = memo(function EcrfModalGroup({
               <button
                 type="button"
                 onClick={() => void onSubmitConfirmContinue()}
-                className="inline-flex flex-1 items-center justify-center rounded-xl bg-gradient-to-r btn-brand-gradient px-5 py-2.5 text-sm font-semibold uppercase text-white shadow-md shadow-emerald-300/35 transition-all duration-200  whitespace-nowrap"
+                className="inline-flex flex-1 items-center justify-center rounded-xl bg-gradient-to-r btn-brand-gradient px-5 py-2.5 text-sm font-semibold uppercase text-white shadow-md shadow-violet-300/40 transition-all duration-200  whitespace-nowrap"
               >
                 SUBMIT & CLOSE
               </button>

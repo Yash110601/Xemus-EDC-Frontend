@@ -606,7 +606,7 @@ export default function UserAgreementModal({ studyId, onAgreementSigned, isOpen,
               <p className="text-red-600 text-center">{error}</p>
               <button
                 onClick={fetchAgreementData}
-                className="mt-4 px-4 py-2 bg-emerald-600 text-white rounded-lg hover:bg-emerald-700 transition-colors"
+                className="mt-4 px-4 py-2 bg-violet-600 text-white rounded-lg hover:bg-emerald-700 transition-colors"
               >
                 Retry
               </button>
@@ -898,7 +898,7 @@ export default function UserAgreementModal({ studyId, onAgreementSigned, isOpen,
                     onClick={switchToScribble}
                     className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors flex items-center gap-2 ${
                       signatureMode === "scribble"
-                        ? "bg-emerald-600 text-white"
+                        ? "bg-violet-600 text-white"
                         : "bg-slate-100 text-slate-600 hover:bg-slate-200"
                     }`}
                   >
@@ -910,7 +910,7 @@ export default function UserAgreementModal({ studyId, onAgreementSigned, isOpen,
                     onClick={switchToUpload}
                     className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors flex items-center gap-2 ${
                       signatureMode === "upload"
-                        ? "bg-emerald-600 text-white"
+                        ? "bg-violet-600 text-white"
                         : "bg-slate-100 text-slate-600 hover:bg-slate-200"
                     }`}
                   >

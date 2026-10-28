@@ -429,7 +429,7 @@ function RsdvReviewPageContent() {
             className={cn(
               "inline-flex items-center gap-1.5 rounded-xl px-3 py-1.5 text-xs font-semibold transition-all",
               selected
-                ? "bg-emerald-600 text-white shadow-sm ring-1 ring-emerald-500/30"
+                ? "bg-violet-600 text-white shadow-sm ring-1 ring-violet-500/30"
                 : "border border-slate-200 bg-white text-slate-600 shadow-sm hover:border-emerald-200 hover:bg-emerald-50 hover:text-emerald-800",
             )}
           >
@@ -585,7 +585,7 @@ function RsdvReviewPageContent() {
 
         <div className="min-w-0 flex-1 space-y-2">
           <div className="flex min-w-0 items-start gap-2">
-            <div className="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-emerald-600 text-white shadow-sm">
+            <div className="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-violet-600 text-white shadow-sm">
               <FileText className="h-4 w-4" />
             </div>
             <div className="min-w-0 flex-1">

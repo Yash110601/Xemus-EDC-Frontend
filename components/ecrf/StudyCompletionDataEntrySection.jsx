@@ -43,7 +43,7 @@ export default function StudyCompletionDataEntrySection({
             className={cn(
               OPTION_BTN_BASE,
               completedStudy === true
-                ? "bg-emerald-600 text-white shadow-sm ring-1 ring-emerald-500/70"
+                ? "bg-violet-600 text-white shadow-sm ring-1 ring-emerald-500/70"
                 : "bg-slate-100/85 text-slate-700 hover:bg-emerald-50",
               disabled && "pointer-events-none opacity-50",
             )}
@@ -57,7 +57,7 @@ export default function StudyCompletionDataEntrySection({
             className={cn(
               OPTION_BTN_BASE,
               completedStudy === false
-                ? "bg-emerald-600 text-white shadow-sm ring-1 ring-emerald-500/70"
+                ? "bg-violet-600 text-white shadow-sm ring-1 ring-emerald-500/70"
                 : "bg-slate-100/85 text-slate-700 hover:bg-emerald-50",
               disabled && "pointer-events-none opacity-50",
             )}
@@ -82,7 +82,7 @@ export default function StudyCompletionDataEntrySection({
                   className={cn(
                     OPTION_BTN_BASE,
                     isActive
-                      ? "bg-emerald-600 text-white shadow-sm ring-1 ring-emerald-500/70"
+                      ? "bg-violet-600 text-white shadow-sm ring-1 ring-emerald-500/70"
                       : "bg-slate-100/85 text-slate-700 hover:bg-emerald-50",
                     disabled && "pointer-events-none opacity-50",
                   )}

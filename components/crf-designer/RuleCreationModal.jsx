@@ -864,7 +864,7 @@ const RuleCreationModal = ({
               }}
               placeholder="Enter rule name"
               maxLength={200}
-              className={`h-11 rounded-xl bg-white/90 focus-visible:ring-emerald-300 ${
+              className={`h-11 rounded-xl bg-white/90 focus-visible:ring-violet-300 ${
                 fieldErrors.ruleName ? "border-rose-400 focus-visible:ring-rose-200" : "border-slate-200/90"
               }`}
             />
@@ -1218,7 +1218,7 @@ const RuleCreationModal = ({
                 }}
                 placeholder="Enter error/warning message"
                 maxLength={500}
-                className={`rounded-xl bg-white/90 focus-visible:ring-emerald-300 ${
+                className={`rounded-xl bg-white/90 focus-visible:ring-violet-300 ${
                   fieldErrors.message ? "border-rose-400 focus-visible:ring-rose-200" : "border-slate-200/90"
                 }`}
               />
@@ -1265,7 +1265,7 @@ const RuleCreationModal = ({
                 handleSave()
               }} 
               disabled={saving} 
-              className="h-10 w-full sm:w-auto cursor-pointer pointer-events-auto rounded-xl bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 text-white font-medium shadow-md hover:shadow-lg transition-all duration-200"
+              className="h-10 w-full sm:w-auto cursor-pointer pointer-events-auto rounded-xl bg-gradient-to-r from-violet-600 to-purple-500 hover:from-violet-700 hover:to-purple-600 text-white font-medium shadow-md hover:shadow-lg transition-all duration-200"
             >
               {saving ? "Saving..." : isEditing ? "Save as new & assign" : "Create & Assign Rule"}
             </Button>

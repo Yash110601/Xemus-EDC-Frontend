@@ -518,7 +518,7 @@ export default function ProfileModal({ isOpen, onClose }) {
                   )}
                 </div>
                 <div>
-                  <label className="inline-flex items-center gap-1.5 px-3 py-1.5 text-sm bg-emerald-600 text-white rounded-lg hover:bg-emerald-700 transition-colors cursor-pointer shadow-md">
+                  <label className="inline-flex items-center gap-1.5 px-3 py-1.5 text-sm bg-violet-600 text-white rounded-lg hover:bg-emerald-700 transition-colors cursor-pointer shadow-md">
                     <Upload className="w-3.5 h-3.5" />
                     {formData.profileImagePreview ? "Change Photo" : "Upload Photo"}
                     <input
@@ -736,7 +736,7 @@ export default function ProfileModal({ isOpen, onClose }) {
                     type="button"
                     onClick={handleChangePassword}
                     disabled={changingPassword}
-                    className="px-3 py-1.5 text-sm bg-emerald-600 text-white rounded-lg hover:bg-emerald-700 disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="px-3 py-1.5 text-sm bg-violet-600 text-white rounded-lg hover:bg-emerald-700 disabled:opacity-50 disabled:cursor-not-allowed"
                   >
                     {changingPassword ? "Updating..." : "Update password"}
                   </button>
@@ -755,7 +755,7 @@ export default function ProfileModal({ isOpen, onClose }) {
               <button
                 type="submit"
                 disabled={saving}
-                className="px-4 py-1.5 text-sm bg-emerald-600 text-white rounded-lg hover:bg-emerald-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-1.5"
+                className="px-4 py-1.5 text-sm bg-violet-600 text-white rounded-lg hover:bg-emerald-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-1.5"
               >
                 <Save className="w-3.5 h-3.5" />
                 {saving ? "Saving..." : "Save Changes"}

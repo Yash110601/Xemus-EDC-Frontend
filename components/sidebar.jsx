@@ -13,7 +13,7 @@ import {
 } from "@/lib/utils/refreshAuthMenuFromPermissions"
 import { hasMenuViewPermission } from "@/lib/utils/menuRoutePermissions"
 import ProfileModal from "./profile-modal"
-import { BrandLogo } from "@/components/brand-logo"
+import { BrandMark } from "@/components/brand-logo"
 import {
   APP_NAV_ACCENT_BAR,
   APP_NAV_CHEVRON,
@@ -1526,8 +1526,11 @@ export default function Sidebar({
             <div className={APP_SIDEBAR_BRAND}>
                 {isMobileViewport ? (
                     <>
-                        <div className="min-w-0 flex-1 pl-0.5">
-                            <BrandWordmark className="gap-0 [&>span]:text-[21px] [&>span]:font-extrabold [&>span]:tracking-[-0.02em] [&>span>span:first-child]:text-[#101B2D] [&>span>span:last-child]:bg-none [&>span>span:last-child]:text-[#10A269]" />
+                        <div className="min-w-0 flex-1 overflow-hidden pl-0.5">
+                            <BrandWordmark
+                              markClassName="h-8 w-8 sm:h-8 sm:w-8"
+                              textClassName="text-[21px] font-extrabold tracking-[-0.02em] text-[#3D2F63] sm:text-[21px]"
+                            />
                             <p className="mt-0.5 truncate text-[9.5px] font-semibold uppercase tracking-[0.16em] text-[#8A98A8]">
                                 {APP_BRANDING.badgeLabel}
                             </p>
@@ -1548,16 +1551,19 @@ export default function Sidebar({
                     <button
                         type="button"
                         onClick={() => setIsCollapsed()}
-                        className="mx-auto flex h-[30px] w-[30px] items-center justify-center rounded-lg border border-[#E9EDF2] bg-white text-[#7C8A9B] transition-colors hover:border-[#DBE2E9] hover:bg-[#F2F5F8] hover:text-[#46566B]"
+                        className="mx-auto flex h-9 w-9 items-center justify-center rounded-xl border border-[#E9EDF2] bg-white transition-colors hover:border-[#DDD4F0] hover:bg-[#F7F4FC]"
                         title="Expand sidebar"
                         aria-label="Expand sidebar"
                     >
-                        <BrandLogo size="xs" className="h-6 object-contain" />
+                        <BrandMark className="h-7 w-7" />
                     </button>
                 ) : (
                     <>
-                        <div className="min-w-0 flex-1 pl-0.5">
-                            <BrandWordmark className="gap-0 [&>span]:text-[21px] [&>span]:font-extrabold [&>span]:tracking-[-0.02em] [&>span>span:first-child]:text-[#101B2D] [&>span>span:last-child]:bg-none [&>span>span:last-child]:text-[#10A269]" />
+                        <div className="min-w-0 flex-1 overflow-hidden pl-0.5">
+                            <BrandWordmark
+                              markClassName="h-8 w-8 sm:h-8 sm:w-8"
+                              textClassName="text-[21px] font-extrabold tracking-[-0.02em] text-[#3D2F63] sm:text-[21px]"
+                            />
                             <p className="mt-0.5 truncate text-[9.5px] font-semibold uppercase tracking-[0.16em] text-[#8A98A8]">
                                 {APP_BRANDING.badgeLabel}
                             </p>
@@ -1608,7 +1614,7 @@ export default function Sidebar({
                                 </p>
                                 <Link
                                     href="/dashboard"
-                                    className="mt-3 inline-flex text-[11px] font-semibold text-[#0C7E52] hover:text-[#10A269]"
+                                    className="mt-3 inline-flex text-[11px] font-semibold text-[#7C6BB5] hover:text-[#3D2F63]"
                                 >
                                     Open dashboard →
                                 </Link>
@@ -1639,7 +1645,7 @@ export default function Sidebar({
                         aria-haspopup="menu"
                     >
                         <div className="relative shrink-0">
-                            <div className="flex h-[38px] w-[38px] items-center justify-center overflow-hidden rounded-[11px] bg-gradient-to-br from-[#10A269] to-[#0E8A5B] text-white">
+                            <div className="flex h-[38px] w-[38px] items-center justify-center overflow-hidden rounded-[11px] bg-gradient-to-br from-[#7C6BB5] to-[#3D2F63] text-white">
                                 {profileImageUrl ? (
                                     <img
                                         src={profileImageUrl}
@@ -1686,7 +1692,7 @@ export default function Sidebar({
                                     setShowUserMenu(false)
                                     setShowProfileModal(true)
                                 }}
-                                className="flex w-full items-center gap-2 px-4 py-2 text-left text-sm text-slate-700 transition-colors hover:bg-emerald-50"
+                                className="flex w-full items-center gap-2 px-4 py-2 text-left text-sm text-slate-700 transition-colors hover:bg-violet-50"
                             >
                                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path
@@ -1700,7 +1706,7 @@ export default function Sidebar({
                             </button>
                             <button
                                 onClick={handleLogout}
-                                className="flex w-full items-center gap-2 px-4 py-2 text-left text-sm text-slate-700 transition-colors hover:bg-emerald-50"
+                                className="flex w-full items-center gap-2 px-4 py-2 text-left text-sm text-slate-700 transition-colors hover:bg-violet-50"
                             >
                                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path

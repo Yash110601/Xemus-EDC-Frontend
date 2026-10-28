@@ -443,7 +443,7 @@ function LabsSectionInner() {
                 type="button"
                 onClick={handleCreateSave}
                 disabled={saving || pinLookupLoading}
-                className="inline-flex items-center gap-2 rounded-xl bg-emerald-600 px-6 font-semibold text-white shadow-md hover:bg-emerald-700"
+                className="inline-flex items-center gap-2 rounded-xl bg-violet-600 px-6 font-semibold text-white shadow-md hover:bg-emerald-700"
               >
                 {saving ? (
                   <>

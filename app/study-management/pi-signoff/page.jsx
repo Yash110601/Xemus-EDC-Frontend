@@ -466,7 +466,7 @@ function PiSignoffPageContent() {
                 type="button"
                 size="sm"
                 disabled={!selectedSiteId || readyCountForSelectedSite <= 0 || loadingQueue}
-                className="rounded-xl bg-indigo-600 hover:bg-indigo-700"
+                className="rounded-xl bg-violet-600 hover:bg-violet-700"
                 onClick={() => {
                   setSignComment("")
                   setPasswordDialog({
@@ -708,7 +708,7 @@ function PiSignoffPageContent() {
                                       className={cn(
                                         "h-8 rounded-lg text-xs font-semibold",
                                         ready
-                                          ? "bg-indigo-600 text-white hover:bg-indigo-700"
+                                          ? "bg-violet-600 text-white hover:bg-violet-700"
                                           : "bg-slate-100 text-slate-400 hover:bg-slate-100",
                                       )}
                                       onClick={() => {

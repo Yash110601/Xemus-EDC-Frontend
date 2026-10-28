@@ -468,7 +468,7 @@ const CRFList = ({ onView, onEdit, onCreateNew, onPrintBlank, studyId = null, on
         {onCreateNew && (
           <Button
             onClick={onCreateNew}
-            className="w-full sm:w-auto bg-emerald-600 hover:bg-emerald-700 text-white"
+            className="w-full sm:w-auto bg-violet-600 hover:bg-violet-700 text-white"
           >
             <Plus className="w-4 h-4 mr-2" />
             Create New CRF

@@ -1181,7 +1181,7 @@ export default function RichTextEditor({
                   }
             }
             suppressContentEditableWarning
-            className={`email-content-editor min-h-[280px] max-w-none outline-none focus:ring-2 focus:ring-emerald-500/30 text-slate-900 ${
+            className={`email-content-editor min-h-[280px] max-w-none outline-none focus:ring-2 focus:ring-violet-500/30 text-slate-900 ${
               readOnly ? "cursor-default" : "cursor-text"
             }`}
             style={{

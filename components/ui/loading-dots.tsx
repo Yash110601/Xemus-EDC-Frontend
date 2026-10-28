@@ -10,13 +10,13 @@ export function LoadingDots({ className, size = 'md', ...props }: LoadingDotsPro
 
   return (
     <div className={cn('inline-flex items-center gap-1', className)} {...props}>
-      <span className={cn(dotSize, 'rounded-full bg-emerald-500 animate-bounce')} />
+      <span className={cn(dotSize, 'rounded-full bg-violet-500 animate-bounce')} />
       <span
-        className={cn(dotSize, 'rounded-full bg-emerald-500 animate-bounce')}
+        className={cn(dotSize, 'rounded-full bg-violet-500 animate-bounce')}
         style={{ animationDelay: '0.15s' }}
       />
       <span
-        className={cn(dotSize, 'rounded-full bg-emerald-500 animate-bounce')}
+        className={cn(dotSize, 'rounded-full bg-violet-500 animate-bounce')}
         style={{ animationDelay: '0.3s' }}
       />
     </div>

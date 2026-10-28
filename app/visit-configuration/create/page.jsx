@@ -495,7 +495,7 @@ export default function VisitConfigurationCreatePage() {
                   <button
                     type="submit"
                     disabled={loading}
-                    className="inline-flex h-10 min-w-[110px] items-center justify-center gap-2 rounded-lg bg-gradient-to-r btn-brand-gradient px-4 text-sm font-semibold text-white shadow-md transition-all duration-200 hover:-translate-y-0.5  hover:shadow-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-300/80 active:translate-y-[1px] active:shadow-md disabled:cursor-not-allowed disabled:opacity-50"
+                    className="inline-flex h-10 min-w-[110px] items-center justify-center gap-2 rounded-lg bg-gradient-to-r btn-brand-gradient px-4 text-sm font-semibold text-white shadow-md transition-all duration-200 hover:-translate-y-0.5  hover:shadow-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-300/80 active:translate-y-[1px] active:shadow-md disabled:cursor-not-allowed disabled:opacity-50"
                   >
                     {loading ? (
                       <>

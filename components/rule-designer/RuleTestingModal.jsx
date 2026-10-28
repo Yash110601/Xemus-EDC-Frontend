@@ -287,7 +287,7 @@ const RuleTestingModal = ({ open, onClose, ruleExpression, ruleMessage }) => {
           <Button
             onClick={handleCheckRule}
             disabled={isChecking || fieldNames.length === 0 || !ruleExpression}
-            className="px-6 bg-emerald-600 hover:bg-emerald-700 text-white"
+            className="px-6 bg-violet-600 hover:bg-violet-700 text-white"
           >
             {isChecking ? "Checking..." : "CHECK RULE"}
           </Button>

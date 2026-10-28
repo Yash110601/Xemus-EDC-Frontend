@@ -213,7 +213,7 @@ export default function PivotTable({
                   onClick={() => setCurrentPage(pageNum)}
                   className={`px-3 py-1 rounded transition-colors ${
                     currentPage === pageNum
-                      ? 'bg-emerald-600 text-white font-semibold'
+                      ? 'bg-violet-600 text-white font-semibold'
                       : 'hover:bg-slate-200 text-slate-700'
                   }`}
                 >

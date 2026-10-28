@@ -484,7 +484,7 @@ const getSubmitterQueryFieldCardToneClasses = (status) => {
     return "border-orange-400/90 bg-orange-50/45 ring-1 ring-orange-300/55 shadow-[0_8px_22px_-14px_rgba(249,115,22,0.2)]"
   }
   if (n === QUERY_STATUS_CLOSED) {
-    return "border-emerald-400/85 bg-emerald-50/35 ring-1 ring-emerald-300/45 shadow-[0_8px_22px_-14px_rgba(16,185,129,0.18)]"
+    return "border-emerald-400/85 bg-emerald-50/35 ring-1 ring-violet-300/45 shadow-[0_8px_22px_-14px_rgba(16,185,129,0.18)]"
   }
   return "border-emerald-200/85 bg-emerald-50/30 ring-1 ring-emerald-200/45"
 }
@@ -15728,7 +15728,7 @@ export default function ECRFDataEntryPage() {
                     type="button"
                     onClick={() => handleSaveCrfData(3)}
                     disabled={saving}
-                    className="px-5 py-2.5 text-sm font-semibold text-white bg-gradient-to-r btn-brand-gradient rounded-xl  shadow-md shadow-emerald-300/35 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2"
+                    className="px-5 py-2.5 text-sm font-semibold text-white bg-gradient-to-r btn-brand-gradient rounded-xl  shadow-md shadow-violet-300/40 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2"
                   >
                     {saving ? (
                       <>
@@ -15767,7 +15767,7 @@ export default function ECRFDataEntryPage() {
                             onClick={() => handleSaveCrfData(3)}
                             disabled={saving}
                             title=""
-                            className="px-5 py-2.5 text-sm font-semibold text-white bg-gradient-to-r btn-brand-gradient rounded-xl  shadow-md shadow-emerald-300/35 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2"
+                            className="px-5 py-2.5 text-sm font-semibold text-white bg-gradient-to-r btn-brand-gradient rounded-xl  shadow-md shadow-violet-300/40 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2"
                           >
                             {saving ? (
                               <>
@@ -15802,7 +15802,7 @@ export default function ECRFDataEntryPage() {
                     <button
                       type="button"
                       onClick={cancelManualQueryDraft}
-                      className="inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-lg border border-white/55 bg-white/25 text-slate-800 shadow-[inset_0_1px_0_rgba(255,255,255,0.75),0_6px_20px_-14px_rgba(15,23,42,0.2)] backdrop-blur-md transition-colors hover:bg-white/40 hover:text-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-300/50 focus-visible:ring-offset-1"
+                      className="inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-lg border border-white/55 bg-white/25 text-slate-800 shadow-[inset_0_1px_0_rgba(255,255,255,0.75),0_6px_20px_-14px_rgba(15,23,42,0.2)] backdrop-blur-md transition-colors hover:bg-white/40 hover:text-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-300/50 focus-visible:ring-offset-1"
                       aria-label="Close"
                       title="Close"
                     >
@@ -16039,7 +16039,7 @@ export default function ECRFDataEntryPage() {
                     <button
                       type="button"
                       onClick={createManualFieldQuery}
-                      className="rounded-md bg-gradient-to-r from-emerald-600 to-teal-600 px-3 py-2 text-xs font-semibold text-white hover:from-emerald-700 hover:to-teal-700 shadow-sm"
+                      className="rounded-md bg-gradient-to-r from-violet-600 to-purple-500 px-3 py-2 text-xs font-semibold text-white hover:from-violet-700 hover:to-purple-600 shadow-sm"
                     >
                       Raise Query
                     </button>

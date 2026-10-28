@@ -539,7 +539,7 @@ function StudyRolePermissionsPageContent() {
                 size="sm"
                 disabled={!canSave || !selectedStudyId || saving}
                 onClick={handleSave}
-                className="rounded-xl bg-emerald-600 hover:bg-emerald-700"
+                className="rounded-xl bg-violet-600 hover:bg-violet-700"
               >
                 {saving ? <Loader2 className="mr-1.5 h-3.5 w-3.5 animate-spin" /> : <Save className="mr-1.5 h-3.5 w-3.5" />}
                 Save matrix
@@ -613,7 +613,7 @@ function StudyRolePermissionsPageContent() {
                     type="button"
                     size="sm"
                     onClick={() => setCreateRoleOpen(true)}
-                    className="rounded-xl bg-emerald-600 hover:bg-emerald-700"
+                    className="rounded-xl bg-violet-600 hover:bg-violet-700"
                   >
                     <Plus className="mr-1.5 h-3.5 w-3.5" />
                     Add role

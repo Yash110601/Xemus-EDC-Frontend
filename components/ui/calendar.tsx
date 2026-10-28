@@ -207,7 +207,7 @@ function CalendarDayButton({
           !modifiers.selected &&
           'border-2 border-slate-500 text-slate-900 rounded-full font-semibold',
         modifiers.selected &&
-          'bg-emerald-600 text-white font-semibold rounded-full shadow ring-2 ring-emerald-300',
+          'bg-violet-600 text-white font-semibold rounded-full shadow ring-2 ring-violet-300',
         defaultClassNames.day,
         className,
       )}

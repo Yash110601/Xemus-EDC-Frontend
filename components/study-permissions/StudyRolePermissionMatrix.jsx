@@ -19,7 +19,7 @@ function PermissionToggle({ checked, disabled, onChange, label, compact = false 
       disabled={disabled}
       onClick={() => !disabled && onChange(!checked)}
       className={cn(
-        "relative shrink-0 rounded-full transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500/40",
+        "relative shrink-0 rounded-full transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-violet-500/40",
         compact ? "h-5 w-8" : "mx-auto h-6 w-10",
         checked ? "bg-emerald-600" : "bg-slate-300",
         disabled && "cursor-not-allowed opacity-45",

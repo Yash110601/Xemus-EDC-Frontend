@@ -22,7 +22,7 @@ const buttonVariants = cva(
           'hover:bg-accent hover:text-accent-foreground dark:hover:bg-accent/50',
         link: 'text-primary underline-offset-4 hover:underline',
         brand:
-          'btn-brand-gradient rounded-xl text-white shadow-md shadow-emerald-900/10 hover:shadow-lg focus-visible:ring-emerald-500/30',
+          'btn-brand-gradient rounded-xl text-white shadow-md shadow-violet-900/15 hover:shadow-lg focus-visible:ring-violet-500/30',
       },
       size: {
         default: 'h-9 px-4 py-2 has-[>svg]:px-3',

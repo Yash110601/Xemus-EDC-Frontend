@@ -283,7 +283,7 @@ export default function SiteAssignUsersModal({
                         type="checkbox"
                         checked={checked}
                         onChange={() => toggleUser(userId)}
-                        className="h-4 w-4 rounded border-slate-300 text-emerald-600 focus:ring-emerald-500/30"
+                        className="h-4 w-4 rounded border-slate-300 text-emerald-600 focus:ring-violet-500/30"
                       />
                       <span className="min-w-0 flex-1">
                         <span className="block truncate text-sm font-medium text-slate-800">{pickUserLabel(user)}</span>
@@ -310,7 +310,7 @@ export default function SiteAssignUsersModal({
           </Button>
           <Button
             type="button"
-            className="rounded-xl bg-emerald-600 hover:bg-emerald-700"
+            className="rounded-xl bg-violet-600 hover:bg-violet-700"
             disabled={assigning || selectedUserIds.size === 0}
             onClick={handleAssign}
           >
