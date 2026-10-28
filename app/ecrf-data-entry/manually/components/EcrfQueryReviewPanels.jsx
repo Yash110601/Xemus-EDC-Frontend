@@ -80,7 +80,7 @@ const EcrfQueryReviewPanels = memo(function EcrfQueryReviewPanels({
                 <button
                   type="button"
                   onClick={() => setManualQueryReview(null)}
-                  className="inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-lg border border-white/55 bg-white/25 text-slate-800 shadow-[inset_0_1px_0_rgba(255,255,255,0.75),0_6px_20px_-14px_rgba(15,23,42,0.2)] backdrop-blur-md transition-colors hover:bg-white/40 hover:text-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-300/50 focus-visible:ring-offset-1"
+                  className="inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-lg border border-white/55 bg-white/25 text-slate-800 shadow-[inset_0_1px_0_rgba(255,255,255,0.75),0_6px_20px_-14px_rgba(15,23,42,0.2)] backdrop-blur-md transition-colors hover:bg-white/40 hover:text-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-300/50 focus-visible:ring-offset-1"
                   aria-label="Close"
                   title="Close"
                 >

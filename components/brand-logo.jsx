@@ -10,11 +10,11 @@ const HEIGHT = {
   card: "h-[3.75rem]",
 }
 
-/** Xemus mark (inline SVG — crisp at any size). */
+/** Xemus mark — square monogram (full name lives in the wordmark text). */
 export function XemusMark({ className, variant = "color" }) {
-  const fill = variant === "light" ? "#E8F7F5" : "#0F2744"
-  const ink = variant === "light" ? "#0F2744" : "#FFFFFF"
-  const accent = variant === "light" ? "#0D9488" : "#14B8A6"
+  const fill = variant === "light" ? "#EDE7F6" : "#3D2F63"
+  const ink = variant === "light" ? "#3D2F63" : "#FFFFFF"
+  const accent = variant === "light" ? "#7C6BB5" : "#9B87C7"
 
   return (
     <svg viewBox="0 0 80 80" fill="none" className={className} aria-hidden="true">
@@ -22,23 +22,23 @@ export function XemusMark({ className, variant = "color" }) {
       <path d="M4 58h72v4a18 18 0 0 1-18 18H22A18 18 0 0 1 4 62v-4z" fill={accent} />
       <text
         x="40"
-        y="50"
+        y="52"
         textAnchor="middle"
         fill={ink}
         fontFamily="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif"
-        fontSize="15"
+        fontSize="36"
         fontWeight="800"
-        letterSpacing="-0.04em"
+        letterSpacing="-0.06em"
       >
-        Xemus
+        X
       </text>
     </svg>
   )
 }
 
-/** Full lockup: Xemus mark + Xemus wordmark. */
+/** Full lockup: X mark + Xemus wordmark. */
 export function XemusWordmark({ className, variant = "color", markClassName, textClassName }) {
-  const textColor = variant === "light" ? "text-white" : "text-[#0F2744]"
+  const textColor = variant === "light" ? "text-white" : "text-[#3D2F63]"
 
   return (
     <div className={cn("inline-flex items-center gap-2.5", className)} role="img" aria-label="Xemus">
@@ -82,10 +82,20 @@ export function BrandMark({ size = "md", className }) {
   return <XemusMark className={cn("aspect-square", HEIGHT[size] ?? HEIGHT.md, className)} />
 }
 
-export function BrandWordmark({ showTagline = false, className, light = false }) {
+export function BrandWordmark({
+  showTagline = false,
+  className,
+  light = false,
+  markClassName,
+  textClassName,
+}) {
   return (
     <div className={cn("flex flex-col", className)}>
-      <XemusWordmark variant={light ? "light" : "color"} />
+      <XemusWordmark
+        variant={light ? "light" : "color"}
+        markClassName={markClassName}
+        textClassName={textClassName}
+      />
       {showTagline ? (
         <span className={cn("mt-1 text-xs", light ? "text-slate-400" : "text-slate-500")}>
           {APP_BRANDING.tagline}

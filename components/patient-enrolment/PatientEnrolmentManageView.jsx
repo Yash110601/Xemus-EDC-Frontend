@@ -676,7 +676,7 @@ export default function PatientEnrolmentManageView() {
             <button
               type="button"
               onClick={() => router.push("/patient-enrolment/create")}
-              className="inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-emerald-600 to-teal-600 px-4 py-2.5 text-sm font-semibold text-white shadow-md shadow-emerald-900/10 transition hover:from-emerald-700 hover:to-teal-700"
+              className="inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-violet-600 to-purple-500 px-4 py-2.5 text-sm font-semibold text-white shadow-md shadow-violet-900/15 transition hover:from-violet-700 hover:to-purple-600"
             >
               <Plus className="h-4 w-4" />
               Create patient enrolment
@@ -687,7 +687,7 @@ export default function PatientEnrolmentManageView() {
 
           {success && (
             <div className={PE_ALERT_SUCCESS_CLASS}>
-              <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-emerald-600 text-sm font-bold text-white">
+              <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-violet-600 text-sm font-bold text-white">
                 ✓
               </div>
               <p className="flex-1 font-medium text-emerald-900">{success}</p>
@@ -987,7 +987,7 @@ export default function PatientEnrolmentManageView() {
                                     }}
                                     disabled={updatingStatus[patient.id]}
                                     className={`relative inline-flex h-8 w-16 items-center rounded-full transition-all duration-200 focus:outline-none focus:ring-4 focus:ring-emerald-100 disabled:opacity-50 disabled:cursor-not-allowed shadow-sm cursor-pointer ${(resolveIsActive(patient.isActive ?? patient.IsActive))
-                                      ? "bg-emerald-600 hover:bg-emerald-700"
+                                      ? "bg-violet-600 hover:bg-violet-700"
                                       : "bg-slate-300 hover:bg-slate-400"
                                       }`}
                                   >
@@ -1075,7 +1075,7 @@ export default function PatientEnrolmentManageView() {
                   {/* Success/Error Messages */}
                   {success && (
                     <div className={cn(PE_ALERT_SUCCESS_CLASS, "mb-6")}>
-                      <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-emerald-600 text-sm font-bold text-white">✓</div>
+                      <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-violet-600 text-sm font-bold text-white">✓</div>
                       <p className="font-medium text-emerald-900">{success}</p>
                     </div>
                   )}

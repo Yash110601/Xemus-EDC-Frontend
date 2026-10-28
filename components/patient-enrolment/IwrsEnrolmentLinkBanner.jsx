@@ -17,7 +17,7 @@ export default function IwrsEnrolmentLinkBanner({ className }) {
         className,
       )}
     >
-      <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-emerald-600 text-white shadow-sm">
+      <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-violet-600 text-white shadow-sm">
         <Link2 className="h-4 w-4" strokeWidth={2} aria-hidden />
       </div>
       <div className="min-w-0 flex-1 space-y-1">

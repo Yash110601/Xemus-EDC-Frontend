@@ -419,17 +419,17 @@ export function SitePatientEnrollmentBarChart({
 
   const barSeries = isTotalSubjects
     ? [
-        { key: "screened", top: "#93c5fd", bottom: "#3b82f6", name: "Screened", color: "#3b82f6" },
-        { key: "screenFailed", top: "#86efac", bottom: "#22c55e", name: "Screen Failed", color: "#22c55e" },
-        { key: "enrolled", top: "#fdba74", bottom: "#c2410c", name: "Enrolled", color: "#c2410c" },
-        { key: "discontinued", top: "#fca5a5", bottom: "#b91c1c", name: "Discontinued", color: "#b91c1c" },
-        { key: "completed", top: "#c4b5fd", bottom: "#7c3aed", name: "Completed", color: "#7c3aed" },
+        { key: "screened", top: "#C4B5E0", bottom: "#7C6BB5", name: "Screened", color: "#7C6BB5" },
+        { key: "screenFailed", top: "#F5C6DA", bottom: "#E879A9", name: "Screen Failed", color: "#E879A9" },
+        { key: "enrolled", top: "#A5B4FC", bottom: "#6366F1", name: "Enrolled", color: "#6366F1" },
+        { key: "discontinued", top: "#F0D78C", bottom: "#D4A017", name: "Discontinued", color: "#D4A017" },
+        { key: "completed", top: "#8B7BB8", bottom: "#3D2F63", name: "Completed", color: "#3D2F63" },
       ]
     : [
         { key: "planned", top: NOVERA_SERIES[3].light, bottom: NOVERA_SERIES[3].main, name: "Planned", color: NOVERA_SERIES[3].main },
         { key: "enrolled", top: NOVERA_CHART.emeraldLight, bottom: NOVERA_CHART.emerald, name: "Enrolled", color: NOVERA_CHART.emerald },
-        { key: "pending", top: "#fcd34d", bottom: NOVERA_CHART.amber, name: "Pending", color: NOVERA_CHART.amber },
-        { key: "completed", top: "#ddd6fe", bottom: "#7c3aed", name: "Completed", color: "#7c3aed" },
+        { key: "pending", top: "#F0D78C", bottom: NOVERA_CHART.amber, name: "Pending", color: NOVERA_CHART.amber },
+        { key: "completed", top: "#C4B5E0", bottom: "#7C6BB5", name: "Completed", color: "#7C6BB5" },
       ]
   const gradientPrefix = isTotalSubjects ? "total-subjects" : "site-patient"
   const siteCount = chartData.length

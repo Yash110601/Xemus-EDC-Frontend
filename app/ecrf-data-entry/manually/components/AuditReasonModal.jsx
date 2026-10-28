@@ -82,7 +82,7 @@ export default function AuditReasonModal({
               type="button"
               onClick={onConfirm}
               disabled={saving}
-              className="inline-flex items-center gap-2 rounded-lg bg-gradient-to-r btn-brand-gradient px-4 py-2 text-sm font-semibold text-white shadow-md shadow-emerald-300/35 transition-all duration-75 hover:-translate-y-[1px]  hover:shadow-lg active:translate-y-0 disabled:opacity-60"
+              className="inline-flex items-center gap-2 rounded-lg bg-gradient-to-r btn-brand-gradient px-4 py-2 text-sm font-semibold text-white shadow-md shadow-violet-300/40 transition-all duration-75 hover:-translate-y-[1px]  hover:shadow-lg active:translate-y-0 disabled:opacity-60"
             >
               {saving ? <Loader2 className="h-4 w-4 animate-spin" /> : null}
               {isCaptureOnly ? "Save Reason" : "Continue Save"}

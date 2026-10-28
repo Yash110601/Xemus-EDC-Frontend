@@ -137,7 +137,7 @@ export default function CreateRoleDialog({ open, onOpenChange, onCreated }) {
             >
               Cancel
             </Button>
-            <Button type="submit" disabled={saving} className="rounded-xl bg-emerald-600 hover:bg-emerald-700">
+            <Button type="submit" disabled={saving} className="rounded-xl bg-violet-600 hover:bg-violet-700">
               {saving ? <Loader2 className="mr-1.5 h-4 w-4 animate-spin" /> : null}
               Create role
             </Button>

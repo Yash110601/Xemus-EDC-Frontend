@@ -129,7 +129,7 @@ function EConsentShellInner({ title, description, children }) {
                   className={cn(
                     "min-w-[7.5rem] flex-1 rounded-xl px-3 py-2.5 text-center transition-all",
                     active
-                      ? "bg-emerald-600 text-white shadow-md shadow-emerald-900/15"
+                      ? "bg-violet-600 text-white shadow-md shadow-violet-900/15"
                       : "text-slate-600 hover:bg-slate-50 hover:text-slate-900",
                   )}
                 >

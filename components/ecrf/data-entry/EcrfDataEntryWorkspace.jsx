@@ -178,7 +178,7 @@ function StatPill({ label, value, tone = "neutral", onClick }) {
       className={cn(
         "min-w-0 rounded-xl border px-3.5 py-2.5 text-left",
         tones[tone] || tones.neutral,
-        onClick && "transition hover:brightness-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-300",
+        onClick && "transition hover:brightness-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-300",
       )}
     >
       <p className="text-[11px] font-medium text-slate-600">{label}</p>
@@ -803,7 +803,7 @@ export default function EcrfDataEntryWorkspace({
                               !locked &&
                               (hasOpenQueries
                                 ? "ring-1 ring-amber-300/60"
-                                : "border-emerald-400 ring-1 ring-emerald-300/50"),
+                                : "border-emerald-400 ring-1 ring-violet-300/50"),
                           )}
                         >
                           <button

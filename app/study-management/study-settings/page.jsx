@@ -251,8 +251,8 @@ function SettingToggle({ icon: Icon, title, description, checked, onChange, disa
           aria-label={title}
           disabled={disabled}
           onClick={() => !disabled && onChange(!checked)}
-          className={`relative h-7 w-[52px] shrink-0 rounded-full transition-all duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500/40 focus-visible:ring-offset-2 disabled:opacity-40 ${
-            checked ? "bg-emerald-600" : "bg-slate-300"
+          className={`relative h-7 w-[52px] shrink-0 rounded-full transition-all duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] focus:outline-none focus-visible:ring-2 focus-visible:ring-violet-500/40 focus-visible:ring-offset-2 disabled:opacity-40 ${
+            checked ? "bg-violet-600" : "bg-slate-300"
           }`}
         >
           <span
@@ -1472,7 +1472,7 @@ function StudySettingsPageContent() {
                           className={cn(
                             "w-full rounded-2xl px-3 py-3 text-left ring-1 transition-all sm:px-4",
                             selected
-                              ? "bg-emerald-50/90 ring-emerald-300/80"
+                              ? "bg-emerald-50/90 ring-violet-300/80"
                               : "bg-slate-50/90 ring-slate-200/60 hover:bg-white hover:ring-slate-300/80",
                             !canSave && "opacity-60",
                           )}

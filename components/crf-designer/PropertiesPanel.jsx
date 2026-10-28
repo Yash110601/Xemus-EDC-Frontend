@@ -926,7 +926,7 @@ const PropertiesPanel = ({ control, parentLabSection = null, selectedTableColumn
                                 title: "Rule Assigned",
                                 description: `Rule "${savedRule.ruleName}" has been saved and assigned to this control.`,
                                 variant: "success",
-                                className: "border-emerald-300 bg-gradient-to-br from-emerald-50 via-green-50 to-emerald-50 text-emerald-900 shadow-lg shadow-emerald-200/30",
+                                className: "border-emerald-300 bg-gradient-to-br from-emerald-50 via-green-50 to-emerald-50 text-emerald-900 shadow-lg shadow-violet-200/30",
                               })
                             } else if (response.httpStatus === 404 || (response.message && String(response.message).includes("404"))) {
                               // UAT/backend may not have CreateCrfRule – add rule locally so user can continue

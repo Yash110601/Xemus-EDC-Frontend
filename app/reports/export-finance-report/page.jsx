@@ -825,7 +825,7 @@ export default function ExportFinanceReportPage() {
                       }
                       disabled={!selectedStudyId}
                       busy={csvRunning || xlsxRunning || zipRunning}
-                      buttonClassName="flex items-center gap-2 px-3 py-1.5 text-sm font-medium text-white bg-emerald-600 hover:bg-emerald-700 rounded-lg transition-colors disabled:opacity-60"
+                      buttonClassName="flex items-center gap-2 px-3 py-1.5 text-sm font-medium text-white bg-violet-600 hover:bg-violet-700 rounded-lg transition-colors disabled:opacity-60"
                       onExport={async ({ format }) => {
                         if (format === "excel") {
                           handleExportMilestoneExcel()
@@ -2137,7 +2137,7 @@ export default function ExportFinanceReportPage() {
                   <button
                     type="submit"
                     disabled={savingPayment}
-                    className="px-4 py-2 rounded-lg bg-emerald-600 text-sm font-semibold text-white hover:bg-emerald-700 disabled:opacity-60 inline-flex items-center gap-2"
+                    className="px-4 py-2 rounded-lg bg-violet-600 text-sm font-semibold text-white hover:bg-emerald-700 disabled:opacity-60 inline-flex items-center gap-2"
                   >
                     {savingPayment && <Loader2 className="w-4 h-4 animate-spin" />}
                     <span>{savingPayment ? "Saving..." : "Save"}</span>
@@ -2215,7 +2215,7 @@ export default function ExportFinanceReportPage() {
                     type="button"
                     onClick={handleConfirmImportPayments}
                     disabled={importingPayments || (importPreview.errors?.length ?? 0) > 0}
-                    className="inline-flex items-center gap-2 px-3 py-1.5 text-xs font-semibold rounded-lg bg-emerald-600 text-white hover:bg-emerald-700 disabled:opacity-60"
+                    className="inline-flex items-center gap-2 px-3 py-1.5 text-xs font-semibold rounded-lg bg-violet-600 text-white hover:bg-violet-700 disabled:opacity-60"
                   >
                     {importingPayments && <Loader2 className="w-3 h-3 animate-spin" />}
                     <span>Apply Import</span>

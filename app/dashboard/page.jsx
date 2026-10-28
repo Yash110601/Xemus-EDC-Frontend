@@ -42,6 +42,14 @@ import {
   DASHBOARD_CRA_GRID_CLASS,
   DASHBOARD_CRC_ENROLLMENT_GRID_CLASS,
   DASHBOARD_CRC_PAIR_CHART_CLASS,
+  DASHBOARD_STUDIO_HERO_CLASS,
+  DASHBOARD_STUDIO_HERO_MAIN_CLASS,
+  DASHBOARD_STUDIO_HERO_SIDE_CLASS,
+  DASHBOARD_STUDIO_BODY_CLASS,
+  DASHBOARD_STUDIO_STACK_CLASS,
+  DASHBOARD_STUDIO_RAIL_CLASS,
+  DASHBOARD_STUDIO_GROUP_CLASS,
+  DASHBOARD_STUDIO_GROUP_DIVIDER_CLASS,
 } from "@/lib/ui/dashboardUi"
 import { 
   ReportsExportedChart,
@@ -763,13 +771,6 @@ export default function DashboardPage() {
   const stats = dashboardData?.statistics || {}
   const visitTotal = stats.visitCount ?? sbvChart.reduce((s, r) => s + (Number(r.visit) || 0), 0)
 
-  const greeting =
-    new Date().getHours() < 12
-      ? "Good Morning"
-      : new Date().getHours() < 17
-      ? "Good Afternoon"
-      : "Good Evening"
-  
   // Title-case name for display (e.g. "yash" -> "Yash", "yash patil" -> "Yash Patil")
   const toDisplayName = (str) => {
     if (!str || typeof str !== "string") return "User"
@@ -1019,7 +1020,7 @@ export default function DashboardPage() {
     <button
       type="button"
       onClick={() => setTotalSubjectsDownloadOpen(true)}
-      className="inline-flex h-8 items-center gap-1.5 rounded-lg border border-slate-200 bg-white px-2.5 text-[11px] font-semibold text-slate-700 transition hover:border-emerald-300 hover:bg-emerald-50 hover:text-emerald-900"
+      className="inline-flex h-8 items-center gap-1.5 rounded-lg border border-slate-200 bg-white px-2.5 text-[11px] font-semibold text-slate-700 transition hover:border-violet-300 hover:bg-violet-50 hover:text-violet-900"
     >
       <Download className="h-3.5 w-3.5" aria-hidden />
       Download
@@ -1319,7 +1320,6 @@ export default function DashboardPage() {
       >
         <div ref={downloadDropdownRef} className="shrink-0">
           <DashboardCommandHero
-            greeting={greeting}
             displayName={displayName}
             roleName={roleLabel}
             studyTitle={showStudySiteInfoPanel ? null : studyTitle}
@@ -1390,7 +1390,7 @@ export default function DashboardPage() {
                 badges={
                   <>
                     <DashboardChartBadge label="Planned" value={plannedVsActualSummary.planned} tone="sky" />
-                    <DashboardChartBadge label="Actual" value={plannedVsActualSummary.enrolled} tone="emerald" />
+                    <DashboardChartBadge label="Actual" value={plannedVsActualSummary.enrolled} tone="violet" />
                     <DashboardChartBadge label="Completed" value={plannedVsActualSummary.completed} tone="violet" />
                   </>
                 }
@@ -1409,7 +1409,7 @@ export default function DashboardPage() {
                 )}
                 badges={
                   <>
-                    <DashboardChartBadge label="Enrolled" value={craPatientStatusSummary.enrolled} tone="emerald" />
+                    <DashboardChartBadge label="Enrolled" value={craPatientStatusSummary.enrolled} tone="violet" />
                     <DashboardChartBadge label="Screened" value={craPatientStatusSummary.screened} tone="sky" />
                     <DashboardChartBadge label="Completed" value={craPatientStatusSummary.completed} tone="violet" />
                   </>
@@ -1457,7 +1457,7 @@ export default function DashboardPage() {
                     icon={Calendar}
                     fill
                     className={DASHBOARD_CRC_PAIR_CHART_CLASS}
-                    badges={<DashboardChartBadge label="Visit" value={visitTotal} tone="emerald" />}
+                    badges={<DashboardChartBadge label="Visit" value={visitTotal} tone="violet" />}
                     bodyClassName="flex min-h-0 flex-1 flex-col p-4 sm:p-5"
                   >
                     <ScreeningBaselineVisitChart data={chartData} />
@@ -1494,7 +1494,7 @@ export default function DashboardPage() {
               className="min-h-[clamp(480px,62vh,780px)]"
               badges={
                 <>
-                  <DashboardChartBadge label="Enrolled" value={craPatientStatusSummary.enrolled} tone="emerald" />
+                  <DashboardChartBadge label="Enrolled" value={craPatientStatusSummary.enrolled} tone="violet" />
                   <DashboardChartBadge label="Screened" value={craPatientStatusSummary.screened} tone="sky" />
                   <DashboardChartBadge label="Completed" value={craPatientStatusSummary.completed} tone="violet" />
                 </>
@@ -1534,7 +1534,7 @@ export default function DashboardPage() {
             className="min-h-[clamp(520px,68vh,880px)]"
             badges={
               <>
-                <DashboardChartBadge label="Enrolled" value={craPatientStatusSummary.enrolled} tone="emerald" />
+                <DashboardChartBadge label="Enrolled" value={craPatientStatusSummary.enrolled} tone="violet" />
                 <DashboardChartBadge label="Screened" value={craPatientStatusSummary.screened} tone="sky" />
                 <DashboardChartBadge label="Completed" value={craPatientStatusSummary.completed} tone="violet" />
               </>
@@ -1553,38 +1553,100 @@ export default function DashboardPage() {
         )}
 
         {showAdminTotalSubjects && (
-          <DashboardChartSection
-            title="Total Subjects"
-            icon={UserCheck}
-            fill
-            className="min-h-[clamp(520px,70vh,900px)]"
-            badges={
-              <>
-                <DashboardChartBadge label="Enrolled" value={craPatientStatusSummary.enrolled} tone="emerald" />
-                <DashboardChartBadge label="Screened" value={craPatientStatusSummary.screened} tone="sky" />
-                <DashboardChartBadge label="Completed" value={craPatientStatusSummary.completed} tone="violet" />
-              </>
-            }
-            actions={totalSubjectsDownloadAction}
-            bodyClassName="flex min-h-0 flex-1 flex-col p-4 sm:p-5"
-          >
-            <SitePatientEnrollmentBarChart
-              sites={totalSubjectsSites}
-              size="fill"
-              sitesPerPage={5}
-              preferredSiteId={totalSubjectsChartSiteId}
-              variant="totalSubjects"
-            />
-          </DashboardChartSection>
+          <div className="space-y-6">
+            <div className={DASHBOARD_STUDIO_HERO_CLASS}>
+              <DashboardChartSection
+                title="Total Subjects"
+                icon={UserCheck}
+                fill
+                variant="panel"
+                className={DASHBOARD_STUDIO_HERO_MAIN_CLASS}
+                badges={
+                  <>
+                    <DashboardChartBadge label="Enrolled" value={craPatientStatusSummary.enrolled} tone="violet" />
+                    <DashboardChartBadge label="Screened" value={craPatientStatusSummary.screened} tone="sky" />
+                    <DashboardChartBadge label="Completed" value={craPatientStatusSummary.completed} tone="violet" />
+                  </>
+                }
+                actions={totalSubjectsDownloadAction}
+                bodyClassName="flex min-h-0 flex-1 flex-col"
+              >
+                <SitePatientEnrollmentBarChart
+                  sites={totalSubjectsSites}
+                  size="fill"
+                  sitesPerPage={5}
+                  preferredSiteId={totalSubjectsChartSiteId}
+                  variant="totalSubjects"
+                />
+              </DashboardChartSection>
+
+              <DashboardChartSection
+                title="CRF Data Entry"
+                icon={FileText}
+                fill
+                variant="panel"
+                className={DASHBOARD_STUDIO_HERO_SIDE_CLASS}
+                bodyClassName="flex min-h-0 flex-1 flex-col"
+              >
+                <CRFDataEntryChart data={chartData} />
+              </DashboardChartSection>
+            </div>
+
+            <div className={DASHBOARD_STUDIO_BODY_CLASS}>
+              <div className={DASHBOARD_STUDIO_STACK_CLASS}>
+                <div className={DASHBOARD_STUDIO_GROUP_CLASS}>
+                  <DashboardChartSection
+                    title="Visit"
+                    icon={Calendar}
+                    variant="embedded"
+                    badges={<DashboardChartBadge label="Visit" value={visitTotal} tone="violet" />}
+                  >
+                    <ScreeningBaselineVisitChart data={chartData} />
+                  </DashboardChartSection>
+                  <div className={DASHBOARD_STUDIO_GROUP_DIVIDER_CLASS} aria-hidden />
+                  <DashboardChartSection title="Study Open/Close" icon={ClipboardCheck} variant="embedded">
+                    <StudyOpenCloseChart data={chartData} />
+                  </DashboardChartSection>
+                  <div className={DASHBOARD_STUDIO_GROUP_DIVIDER_CLASS} aria-hidden />
+                  <DashboardChartSection title="Reports Exported" icon={Download} variant="embedded">
+                    <ReportsExportedChart data={chartData} />
+                  </DashboardChartSection>
+                </div>
+              </div>
+
+              <div className={DASHBOARD_STUDIO_RAIL_CLASS}>
+                <DashboardChartSection title="Users by Role" icon={Users} variant="rail">
+                  <UserCountsPieChart data={chartData} />
+                </DashboardChartSection>
+                <DashboardChartSection title="Study Status" icon={ClipboardCheck} variant="rail">
+                  <StudyCountsPieChart data={chartData} />
+                </DashboardChartSection>
+                {!isHeroPlannedVsActualLayout && (
+                  <DashboardChartSection title="Planned vs Actual" icon={Calendar} variant="rail">
+                    <StudyCountsBarChart data={chartData} />
+                  </DashboardChartSection>
+                )}
+                {shouldShowQueryManagement && (
+                  <DashboardChartSection title="Query Management" icon={Search} variant="rail">
+                    <QueryManagementPieChart
+                      counts={queryStatusCounts}
+                      systemCounts={systemQueryStatusCounts}
+                    />
+                  </DashboardChartSection>
+                )}
+              </div>
+            </div>
+          </div>
         )}
 
-        {!hideAllChartsExceptPlannedVsActual && !isCra && !isCrcOnly && (
+        {/* Non-admin chart rows (CRC/CRA/sponsor/endoscopist paths keep prior composition) */}
+        {!showAdminTotalSubjects && !hideAllChartsExceptPlannedVsActual && !isCra && !isCrcOnly && (
           <div className={DASHBOARD_BENTO_CLASS}>
             <DashboardChartSection
               title="Visit"
               icon={Calendar}
               className={isCrcOnly ? "lg:col-span-12" : "lg:col-span-6"}
-              badges={<DashboardChartBadge label="Visit" value={visitTotal} tone="emerald" />}
+              badges={<DashboardChartBadge label="Visit" value={visitTotal} tone="violet" />}
             >
               <ScreeningBaselineVisitChart data={chartData} />
             </DashboardChartSection>
@@ -1596,7 +1658,7 @@ export default function DashboardPage() {
           </div>
         )}
 
-        {!hideAllChartsExceptPlannedVsActual && !isCrcSiteRole && (
+        {!showAdminTotalSubjects && !hideAllChartsExceptPlannedVsActual && !isCrcSiteRole && (
           <div className={DASHBOARD_BENTO_CLASS}>
             <DashboardChartSection title="Reports Exported" icon={Download} className="lg:col-span-6">
               <ReportsExportedChart data={chartData} />
@@ -1607,7 +1669,7 @@ export default function DashboardPage() {
           </div>
         )}
 
-        {showThirdChartRow && (
+        {!showAdminTotalSubjects && showThirdChartRow && (
           <div className={DASHBOARD_BENTO_CLASS}>
             {!hideAllChartsExceptPlannedVsActual && !isCrcSiteRole && (
               <DashboardChartSection title="Users by Role" icon={Users} className="lg:col-span-4">
@@ -1634,7 +1696,7 @@ export default function DashboardPage() {
                 }
                 badges={
                   hideAllChartsExceptPlannedVsActual && multiCrfRoleProgress ? (
-                    <span className="rounded-full border border-emerald-200 bg-emerald-50 px-2.5 py-1 text-[11px] font-semibold uppercase tracking-wide text-emerald-700">
+                    <span className="rounded-full border border-violet-200 bg-violet-50 px-2.5 py-1 text-[11px] font-semibold uppercase tracking-wide text-violet-700">
                       Live
                     </span>
                   ) : null
@@ -1653,9 +1715,9 @@ export default function DashboardPage() {
                         <p className="text-[10px] font-semibold uppercase tracking-wide text-sky-600">Planned</p>
                         <p className="mt-0.5 text-sm font-semibold text-sky-900">{totalPlannedPatients}</p>
                       </div>
-                      <div className="rounded-xl border border-emerald-200/80 bg-emerald-50/85 px-3 py-2">
-                        <p className="text-[10px] font-semibold uppercase tracking-wide text-emerald-600">Enrolled</p>
-                        <p className="mt-0.5 text-sm font-semibold text-emerald-900">{totalEnrolledPatients}</p>
+                      <div className="rounded-xl border border-violet-200/80 bg-violet-50/85 px-3 py-2">
+                        <p className="text-[10px] font-semibold uppercase tracking-wide text-violet-600">Enrolled</p>
+                        <p className="mt-0.5 text-sm font-semibold text-violet-900">{totalEnrolledPatients}</p>
                       </div>
                       <div className="rounded-xl border border-teal-200/80 bg-teal-50/85 px-3 py-2">
                         <p className="text-[10px] font-semibold uppercase tracking-wide text-teal-600">Endoscopist</p>

@@ -229,7 +229,7 @@ export default function AgreementManagePage() {
           <button
             type="button"
             onClick={handleCreateNew}
-            className="px-4 py-2.5 rounded-lg bg-emerald-600 text-white font-semibold text-sm shadow-md hover:bg-emerald-700 transition-colors inline-flex items-center gap-2 self-start sm:self-auto"
+            className="px-4 py-2.5 rounded-lg bg-violet-600 text-white font-semibold text-sm shadow-md hover:bg-emerald-700 transition-colors inline-flex items-center gap-2 self-start sm:self-auto"
           >
             <Plus className="w-4 h-4" />
             Create New Agreement

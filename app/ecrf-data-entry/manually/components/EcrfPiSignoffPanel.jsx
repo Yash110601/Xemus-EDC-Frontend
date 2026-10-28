@@ -250,7 +250,7 @@ function EcrfPiSignoffPanel({
                   setComment("")
                   setPasswordDialog({ open: true, mode: "apply" })
                 }}
-                className="bg-indigo-600 hover:bg-indigo-700 disabled:opacity-50"
+                className="bg-violet-600 hover:bg-violet-700 disabled:opacity-50"
                 title={
                   !canApplySignoff && readiness.blockedReasons?.length
                     ? readiness.blockedReasons.join("; ")

@@ -294,7 +294,7 @@ export default function StudySiteSelector({ isOpen, onClose, onStudySelect, onSi
               <button
                 type="button"
                 onClick={() => setActiveTab("study")}
-                className="mr-1 flex h-9 w-9 shrink-0 items-center justify-center rounded-full text-slate-500 transition-all duration-200 hover:bg-emerald-50 hover:text-emerald-700 hover:shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-300/80 focus-visible:ring-offset-2"
+                className="mr-1 flex h-9 w-9 shrink-0 items-center justify-center rounded-full text-slate-500 transition-all duration-200 hover:bg-emerald-50 hover:text-emerald-700 hover:shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-300/80 focus-visible:ring-offset-2"
                 title="Back to studies"
               >
                 <ChevronRight className="h-4 w-4 rotate-180" aria-hidden />
@@ -317,7 +317,7 @@ export default function StudySiteSelector({ isOpen, onClose, onStudySelect, onSi
           <button
             type="button"
             onClick={onClose}
-            className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full text-slate-500 transition-all duration-200 hover:bg-emerald-50 hover:text-emerald-700 hover:shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-300/80 focus-visible:ring-offset-2"
+            className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full text-slate-500 transition-all duration-200 hover:bg-emerald-50 hover:text-emerald-700 hover:shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-300/80 focus-visible:ring-offset-2"
             aria-label="Close"
           >
             <X className="h-5 w-5" strokeWidth={1.75} />
@@ -338,7 +338,7 @@ export default function StudySiteSelector({ isOpen, onClose, onStudySelect, onSi
                   setActiveTab("study")
                   setSearchQuery("")
                 }}
-                className={`flex-1 rounded-xl px-3 py-2 text-sm font-semibold transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-300/80 focus-visible:ring-offset-2 ${
+                className={`flex-1 rounded-xl px-3 py-2 text-sm font-semibold transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-300/80 focus-visible:ring-offset-2 ${
                   activeTab === "study"
                     ? "bg-white text-slate-700 shadow-sm ring-1 ring-slate-200"
                     : "text-slate-600 hover:bg-white/90 hover:text-emerald-700"
@@ -352,7 +352,7 @@ export default function StudySiteSelector({ isOpen, onClose, onStudySelect, onSi
                   setActiveTab("site")
                   setSearchQuery("")
                 }}
-                className={`flex-1 rounded-xl px-3 py-2 text-sm font-semibold transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-300/80 focus-visible:ring-offset-2 ${
+                className={`flex-1 rounded-xl px-3 py-2 text-sm font-semibold transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-300/80 focus-visible:ring-offset-2 ${
                   activeTab === "site"
                     ? "bg-gradient-to-r from-emerald-500 via-emerald-500 to-teal-600 text-white shadow-md shadow-emerald-950/30"
                     : "text-slate-600 hover:bg-white/90 hover:text-emerald-700"
@@ -413,7 +413,7 @@ export default function StudySiteSelector({ isOpen, onClose, onStudySelect, onSi
                       key={studyId}
                       className={`w-full overflow-hidden rounded-2xl border transform-gpu transition-all duration-200 hover:scale-[1.03] ${
                         isSelected
-                          ? "border-emerald-400/65 bg-emerald-50/75 shadow-[0_12px_30px_-14px_rgba(99,102,241,0.32)] ring-1 ring-emerald-300/50"
+                          ? "border-emerald-400/65 bg-emerald-50/75 shadow-[0_12px_30px_-14px_rgba(99,102,241,0.32)] ring-1 ring-violet-300/50"
                           : "border-slate-200/85 bg-white/92 hover:border-emerald-400 hover:bg-emerald-50/35 hover:shadow-md"
                       } ${isExpanded ? "shadow-md" : "shadow-sm"}`}
                       style={{ transformOrigin: "center", willChange: "transform" }}
@@ -421,7 +421,7 @@ export default function StudySiteSelector({ isOpen, onClose, onStudySelect, onSi
                       <button
                         type="button"
                         onClick={() => handleStudyClick(study)}
-                        className={`w-full rounded-2xl p-3.5 text-left transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-300/80 focus-visible:ring-inset ${
+                        className={`w-full rounded-2xl p-3.5 text-left transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-300/80 focus-visible:ring-inset ${
                           isExpanded ? "bg-emerald-50/35" : "hover:bg-slate-50/80"
                         }`}
                       >
@@ -482,7 +482,7 @@ export default function StudySiteSelector({ isOpen, onClose, onStudySelect, onSi
                               e.stopPropagation()
                               handleAddStudy(study)
                             }}
-                            className="flex flex-1 items-center justify-center gap-2 rounded-xl bg-gradient-to-r btn-brand-gradient px-4 py-2.5 text-sm font-semibold text-white shadow-sm transition-all duration-200  hover:shadow-md active:scale-[0.99] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-300/80 focus-visible:ring-offset-2"
+                            className="flex flex-1 items-center justify-center gap-2 rounded-xl bg-gradient-to-r btn-brand-gradient px-4 py-2.5 text-sm font-semibold text-white shadow-sm transition-all duration-200  hover:shadow-md active:scale-[0.99] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-300/80 focus-visible:ring-offset-2"
                           >
                             <Plus className="h-4 w-4" strokeWidth={2} />
                             Select Site
@@ -493,7 +493,7 @@ export default function StudySiteSelector({ isOpen, onClose, onStudySelect, onSi
                               e.stopPropagation()
                               handleRemoveStudy(study)
                             }}
-                            className="flex items-center justify-center gap-2 rounded-xl bg-slate-100 px-4 py-2.5 text-sm font-medium text-slate-700 transition-all duration-200 hover:bg-slate-200 hover:shadow-sm active:scale-[0.99] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-300/80 focus-visible:ring-offset-2"
+                            className="flex items-center justify-center gap-2 rounded-xl bg-slate-100 px-4 py-2.5 text-sm font-medium text-slate-700 transition-all duration-200 hover:bg-slate-200 hover:shadow-sm active:scale-[0.99] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-300/80 focus-visible:ring-offset-2"
                           >
                             <Minus className="h-4 w-4" strokeWidth={2} />
                           </button>
@@ -523,9 +523,9 @@ export default function StudySiteSelector({ isOpen, onClose, onStudySelect, onSi
                       type="button"
                       key={siteId}
                       onClick={() => handleSiteClick(site)}
-                      className={`w-full rounded-2xl border p-3.5 text-left transform-gpu transition-all duration-200 hover:scale-[1.03] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-300/80 focus-visible:ring-inset ${
+                      className={`w-full rounded-2xl border p-3.5 text-left transform-gpu transition-all duration-200 hover:scale-[1.03] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-300/80 focus-visible:ring-inset ${
                         isSelected
-                          ? "border-emerald-400/65 bg-emerald-50/80 shadow-[0_12px_28px_-14px_rgba(99,102,241,0.32)] ring-1 ring-emerald-300/50"
+                          ? "border-emerald-400/65 bg-emerald-50/80 shadow-[0_12px_28px_-14px_rgba(99,102,241,0.32)] ring-1 ring-violet-300/50"
                           : "border-slate-200/85 bg-white/92 hover:border-emerald-400 hover:bg-emerald-50/35 hover:shadow-md"
                       }`}
                       style={{ transformOrigin: "center", willChange: "transform" }}

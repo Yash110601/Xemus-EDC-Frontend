@@ -1,13 +1,13 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 96" fill="none" role="img" aria-label="Xemus">
   <title>Xemus</title>
   <g transform="translate(8 8)">
-    <rect x="4" y="4" width="72" height="72" rx="18" fill="#E8F7F5"/>
-    <path d="M4 58h72v4a18 18 0 0 1-18 18H22A18 18 0 0 1 4 62v-4z" fill="#2DD4BF"/>
+    <rect x="4" y="4" width="72" height="72" rx="18" fill="#EDE7F6"/>
+    <path d="M4 58h72v4a18 18 0 0 1-18 18H22A18 18 0 0 1 4 62v-4z" fill="#9B87C7"/>
     <text
       x="40"
       y="50"
       text-anchor="middle"
-      fill="#0F2744"
+      fill="#3D2F63"
       font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif"
       font-size="15"
       font-weight="800"

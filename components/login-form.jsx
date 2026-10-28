@@ -713,11 +713,14 @@ export default function LoginForm() {
       </div>
 
       <header className="mb-8">
-        <h1 className="text-[2rem] font-semibold tracking-[-0.04em] text-[#0f172a]">
-          Welcome back
+        <p className="mb-2 text-[11px] font-semibold uppercase tracking-[0.18em] text-[#7C6BB5]">
+          {APP_BRANDING.productName}
+        </p>
+        <h1 className="text-[2rem] font-semibold tracking-[-0.04em] text-[#2D1C4E]">
+          Sign in
         </h1>
-        <p className="mt-2 text-[15px] leading-relaxed text-[#64748b]">
-          Sign in to your {APP_BRANDING.productName} workspace.
+        <p className="mt-2 text-[15px] leading-relaxed text-[#7C6F96]">
+          Access your clinical data capture workspace.
         </p>
       </header>
 
@@ -726,7 +729,7 @@ export default function LoginForm() {
         <div
           className={`mb-5 rounded-xl p-3.5 ${
             apiMessage.type === "success"
-              ? "border border-emerald-200 bg-emerald-50 text-emerald-900"
+              ? "border border-violet-200 bg-violet-50 text-violet-900"
               : "border border-red-200 bg-red-50 text-red-900"
           }`}
         >
@@ -751,7 +754,7 @@ export default function LoginForm() {
             <div className="flex-1">
               <p className="text-sm font-medium">{apiMessage.text}</p>
               {authMethod === "otp" && otpSent && otpCountdown > 0 && (
-                <p className="mt-0.5 text-xs text-emerald-800">
+                <p className="mt-0.5 text-xs text-violet-800">
                   Resend OTP in {otpCountdown} second{otpCountdown !== 1 ? "s" : ""}
                 </p>
               )}

@@ -680,7 +680,7 @@ export default function RsdvEcrfComparisonPanel({
             className={cn(
               "inline-flex items-center gap-1.5 rounded-xl px-3 py-1.5 text-xs font-semibold transition-all",
               activeTab === id
-                ? "bg-emerald-600 text-white shadow-sm ring-1 ring-emerald-500/30"
+                ? "bg-violet-600 text-white shadow-sm ring-1 ring-violet-500/30"
                 : "border border-slate-200 bg-white text-slate-600 shadow-sm hover:border-emerald-200 hover:bg-emerald-50 hover:text-emerald-800",
             )}
           >

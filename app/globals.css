@@ -10,33 +10,33 @@
   --card-foreground: 222.2 84% 4.9%;
   --popover: 0 0% 100%;
   --popover-foreground: 222.2 84% 4.9%;
-  --primary: 168 76% 32%;
+  --primary: 262 32% 52%;
   --primary-foreground: 0 0% 100%;
-  --secondary: 210 40% 96.1%;
-  --secondary-foreground: 222.2 47.4% 11.2%;
-  --muted: 210 40% 96.1%;
-  --muted-foreground: 215.4 16.3% 46.9%;
-  --accent: 210 40% 96.1%;
-  --accent-foreground: 222.2 47.4% 11.2%;
+  --secondary: 270 35% 97%;
+  --secondary-foreground: 262 28% 28%;
+  --muted: 270 30% 96%;
+  --muted-foreground: 262 12% 46%;
+  --accent: 270 40% 96%;
+  --accent-foreground: 262 28% 28%;
   --destructive: 0 84.2% 60.2%;
   --destructive-foreground: 210 40% 98%;
-  --border: 214.3 31.8% 91.4%;
-  --input: 214.3 31.8% 91.4%;
-  --ring: 160 84% 39%;
+  --border: 270 22% 90%;
+  --input: 270 22% 90%;
+  --ring: 262 40% 62%;
   --radius: 0.5rem;
-  --chart-1: oklch(0.45 0.08 220);
-  --chart-2: oklch(0.65 0.12 175);
-  --chart-3: oklch(0.55 0.14 160);
-  --chart-4: oklch(0.72 0.1 190);
-  --chart-5: oklch(0.6 0.1 200);
-  --sidebar: oklch(0.16 0.02 220);
-  --sidebar-foreground: oklch(0.92 0 0);
-  --sidebar-primary: oklch(0.55 0.14 160);
+  --chart-1: oklch(0.55 0.1 290);
+  --chart-2: oklch(0.68 0.08 310);
+  --chart-3: oklch(0.6 0.09 270);
+  --chart-4: oklch(0.75 0.07 300);
+  --chart-5: oklch(0.58 0.08 250);
+  --sidebar: oklch(0.99 0.01 295);
+  --sidebar-foreground: oklch(0.28 0.04 285);
+  --sidebar-primary: oklch(0.55 0.12 290);
   --sidebar-primary-foreground: oklch(0.99 0 0);
-  --sidebar-accent: oklch(0.22 0.02 220);
-  --sidebar-accent-foreground: oklch(0.95 0 0);
-  --sidebar-border: oklch(0.28 0.02 220);
-  --sidebar-ring: oklch(0.55 0.14 160);
+  --sidebar-accent: oklch(0.96 0.02 295);
+  --sidebar-accent-foreground: oklch(0.3 0.05 285);
+  --sidebar-border: oklch(0.92 0.02 295);
+  --sidebar-ring: oklch(0.62 0.1 290);
 }
 
 .dark {
@@ -148,7 +148,7 @@
 }
 
 .login-gradient {
-  background: linear-gradient(135deg, #0f3d4a 0%, #0d5c4a 50%, #0a7c55 100%);
+  background: linear-gradient(135deg, #3d2f63 0%, #6b5a9a 50%, #9b87c7 100%);
 }
 
 .login-card {
@@ -174,7 +174,7 @@
   position: absolute;
   inset: 0;
   pointer-events: none;
-  background: linear-gradient(180deg, rgba(16, 162, 105, 0.02) 0%, transparent 28%);
+  background: linear-gradient(180deg, rgba(124, 107, 181, 0.05) 0%, transparent 28%);
 }
 
 .novera-sidebar-brand {
@@ -472,10 +472,10 @@
   background: conic-gradient(
     from 0deg,
     transparent 0deg,
-    rgba(16, 185, 129, 0.18) 35deg,
-    rgba(20, 184, 166, 0.95) 110deg,
-    rgba(14, 165, 233, 0.85) 190deg,
-    rgba(6, 182, 212, 0.75) 260deg,
+    rgba(124, 107, 181, 0.18) 35deg,
+    rgba(157, 135, 199, 0.95) 110deg,
+    rgba(91, 75, 138, 0.85) 190deg,
+    rgba(124, 107, 181, 0.75) 260deg,
     transparent 360deg
   );
   transition: opacity 0.35s ease;
@@ -945,20 +945,20 @@ input[type="number"]::-webkit-inner-spin-button {
   }
 }
 
-/* ─── NoveraRM premium login ─── */
+/* ─── Xemus soft lavender login ─── */
 .btn-brand-gradient {
-  background: linear-gradient(135deg, #0f3d4a 0%, #0d5c4a 42%, #0a7c55 100%);
+  background: linear-gradient(135deg, #5b4b8a 0%, #7c6bb5 42%, #9b87c7 100%);
 }
 
 .btn-brand-gradient:not(:disabled):hover {
-  background: linear-gradient(135deg, #124a5a 0%, #0f6b52 42%, #0b8f5f 100%);
+  background: linear-gradient(135deg, #4a3b73 0%, #6b5a9a 42%, #8b7bb8 100%);
 }
 
 .login-brand-aside {
-  background-color: #f3f6f9;
+  background-color: #f7f4fc;
   background-image:
-    linear-gradient(155deg, rgba(37, 99, 235, 0.03) 0%, transparent 44%),
-    linear-gradient(325deg, rgba(16, 185, 129, 0.025) 0%, transparent 38%);
+    linear-gradient(155deg, rgba(124, 107, 181, 0.08) 0%, transparent 44%),
+    linear-gradient(325deg, rgba(167, 139, 250, 0.06) 0%, transparent 38%);
 }
 
 .login-brand-aside__logo-zone {
@@ -984,7 +984,7 @@ input[type="number"]::-webkit-inner-spin-button {
   left: -8%;
   width: 26rem;
   height: 26rem;
-  background: rgba(37, 99, 235, 0.08);
+  background: rgba(124, 107, 181, 0.12);
 }
 
 .login-brand-aside__glow--teal {
@@ -992,15 +992,15 @@ input[type="number"]::-webkit-inner-spin-button {
   bottom: 0;
   width: 22rem;
   height: 22rem;
-  background: rgba(16, 185, 129, 0.07);
+  background: rgba(167, 139, 250, 0.1);
 }
 
 .login-form-panel {
   position: relative;
-  background-color: #ffffff;
+  background-color: #fcfbfe;
   background-image:
-    radial-gradient(ellipse 58% 48% at 100% 0%, rgba(37, 99, 235, 0.04), transparent 62%),
-    radial-gradient(ellipse 52% 42% at 0% 100%, rgba(16, 185, 129, 0.035), transparent 58%);
+    radial-gradient(ellipse 58% 48% at 100% 0%, rgba(124, 107, 181, 0.08), transparent 62%),
+    radial-gradient(ellipse 52% 42% at 0% 100%, rgba(167, 139, 250, 0.06), transparent 58%);
 }
 
 .login-form-panel__glow {
@@ -1010,17 +1010,17 @@ input[type="number"]::-webkit-inner-spin-button {
   width: 18rem;
   height: 18rem;
   border-radius: 9999px;
-  background: rgba(37, 99, 235, 0.05);
+  background: rgba(124, 107, 181, 0.08);
   filter: blur(72px);
   pointer-events: none;
 }
 
 .login-btn-primary {
-  background: linear-gradient(135deg, #1d4ed8 0%, #0e7490 55%, #059669 100%);
+  background: linear-gradient(135deg, #5b4b8a 0%, #7c6bb5 55%, #9b87c7 100%);
 }
 
 .login-btn-primary:not(:disabled):hover {
-  background: linear-gradient(135deg, #1e40af 0%, #0f766e 55%, #047857 100%);
+  background: linear-gradient(135deg, #4a3b73 0%, #6b5a9a 55%, #8b7bb8 100%);
 }
 
 .login-brand-logo {
@@ -1028,10 +1028,10 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 
 .login-bg-mesh {
-  background-color: #f4f6f8;
+  background-color: #f7f4fc;
   background-image:
-    linear-gradient(rgba(15, 23, 42, 0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(15, 23, 42, 0.03) 1px, transparent 1px);
+    linear-gradient(rgba(91, 75, 138, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(91, 75, 138, 0.04) 1px, transparent 1px);
   background-size: 32px 32px;
 }
 
@@ -1047,7 +1047,7 @@ input[type="number"]::-webkit-inner-spin-button {
   height: 280px;
   top: 10%;
   right: 8%;
-  background: rgba(16, 185, 129, 0.12);
+  background: rgba(124, 107, 181, 0.14);
   animation: login-orb-float 8s ease-in-out infinite;
 }
 
@@ -1056,7 +1056,7 @@ input[type="number"]::-webkit-inner-spin-button {
   height: 220px;
   bottom: 12%;
   left: 12%;
-  background: rgba(15, 61, 74, 0.08);
+  background: rgba(61, 47, 99, 0.1);
   animation: login-orb-float 10s ease-in-out infinite reverse;
 }
 
@@ -1113,9 +1113,9 @@ input[type="number"]::-webkit-inner-spin-button {
   }
 }
 
-/* ─── Xemus auth — cinematic brand stage ─── */
+/* ─── Xemus auth — soft lavender brand stage ─── */
 .login-page-root {
-  background: #ffffff;
+  background: #faf8fd;
 }
 
 .login-brand-stage__media {
@@ -1136,8 +1136,8 @@ input[type="number"]::-webkit-inner-spin-button {
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(90deg, rgba(7, 18, 32, 0.55) 0%, rgba(7, 18, 32, 0.28) 55%, rgba(7, 18, 32, 0.45) 100%),
-    linear-gradient(180deg, rgba(7, 18, 32, 0.25) 0%, transparent 35%, rgba(7, 18, 32, 0.55) 100%);
+    linear-gradient(90deg, rgba(45, 28, 78, 0.62) 0%, rgba(61, 47, 99, 0.34) 55%, rgba(45, 28, 78, 0.5) 100%),
+    linear-gradient(180deg, rgba(45, 28, 78, 0.3) 0%, transparent 35%, rgba(45, 28, 78, 0.58) 100%);
 }
 
 .login-brand-stage__top {
@@ -1149,12 +1149,12 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 
 .login-btn-primary {
-  background: linear-gradient(135deg, #0f2744 0%, #115e59 55%, #0d9488 100%);
-  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.12) inset;
+  background: linear-gradient(135deg, #5b4b8a 0%, #7c6bb5 55%, #9b87c7 100%);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.16) inset;
 }
 
 .login-btn-primary:not(:disabled):hover {
-  background: linear-gradient(135deg, #163a5f 0%, #0f766e 55%, #14b8a6 100%);
+  background: linear-gradient(135deg, #4a3b73 0%, #6b5a9a 55%, #8b7bb8 100%);
 }
 
 .login-brand-logo {

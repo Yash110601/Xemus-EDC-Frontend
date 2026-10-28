@@ -47,7 +47,7 @@ const PANEL_CARD =
   "rounded-2xl border border-white/70 bg-white/85 shadow-[0_8px_30px_-12px_rgba(15,23,42,0.1)] backdrop-blur-md ring-1 ring-slate-200/50"
 
 const FIELD_INPUT =
-  "mt-2 h-11 w-full rounded-xl border-0 bg-white px-3.5 text-sm shadow-sm ring-1 ring-slate-200/70 transition-all placeholder:text-slate-400 focus-visible:ring-2 focus-visible:ring-emerald-500/35 disabled:opacity-50"
+  "mt-2 h-11 w-full rounded-xl border-0 bg-white px-3.5 text-sm shadow-sm ring-1 ring-slate-200/70 transition-all placeholder:text-slate-400 focus-visible:ring-2 focus-visible:ring-violet-500/35 disabled:opacity-50"
 
 const FIELD_SELECT =
   "mt-2 flex h-11 w-full appearance-none rounded-xl border-0 bg-white px-3.5 text-sm shadow-sm ring-1 ring-slate-200/70 transition-all focus:outline-none focus:ring-2 focus:ring-emerald-500/35 disabled:opacity-50"

@@ -3860,7 +3860,7 @@ export default function UserCreationPage() {
                                 type="button"
                                 onClick={handleBulkCreate}
                                 disabled={hasRunningImport || !defaultStudyId}
-                                className="px-6 py-3 bg-gradient-to-r btn-brand-gradient text-white font-semibold rounded-lg  transition-all shadow-lg shadow-emerald-200 hover:shadow-xl hover:shadow-emerald-300 disabled:opacity-50 disabled:cursor-not-allowed"
+                                className="px-6 py-3 bg-gradient-to-r btn-brand-gradient text-white font-semibold rounded-lg  transition-all shadow-lg shadow-violet-200 hover:shadow-xl hover:shadow-violet-300 disabled:opacity-50 disabled:cursor-not-allowed"
                               >
                                 {hasRunningImport
                                   ? "Import running in background…"
@@ -4816,7 +4816,7 @@ export default function UserCreationPage() {
                         <button
                             type="button"
                             onClick={handleAddVisitAmount}
-                            className="inline-flex items-center gap-2 px-4 py-2 mt-4 bg-emerald-600 text-white rounded-lg hover:bg-emerald-700 transition-colors text-sm font-semibold"
+                            className="inline-flex items-center gap-2 px-4 py-2 mt-4 bg-violet-600 text-white rounded-lg hover:bg-emerald-700 transition-colors text-sm font-semibold"
                           >
                             <Plus className="w-4 h-4" />
                             Add Visit Amount
@@ -4886,7 +4886,7 @@ export default function UserCreationPage() {
                       <button
                         type="submit"
                         disabled={doctorLoading}
-                        className="px-8 py-3 rounded-xl bg-gradient-to-r btn-brand-gradient text-white font-semibold  transition-all shadow-lg shadow-emerald-200 hover:shadow-xl hover:shadow-emerald-300 disabled:opacity-50 disabled:cursor-not-allowed"
+                        className="px-8 py-3 rounded-xl bg-gradient-to-r btn-brand-gradient text-white font-semibold  transition-all shadow-lg shadow-violet-200 hover:shadow-xl hover:shadow-violet-300 disabled:opacity-50 disabled:cursor-not-allowed"
                       >
                         {doctorLoading ? "Creating..." : "Create CRC User"}
                       </button>
@@ -5085,7 +5085,7 @@ export default function UserCreationPage() {
                                     }}
                                     disabled={updatingStatus[user.id]}
                                     className={`relative inline-flex h-7 w-14 items-center rounded-full transition-all duration-200 focus:outline-none focus:ring-4 focus:ring-emerald-100 disabled:opacity-50 disabled:cursor-not-allowed shadow-sm cursor-pointer ${user.isActive
-                                      ? "bg-emerald-600 hover:bg-emerald-700"
+                                      ? "bg-violet-600 hover:bg-violet-700"
                                       : "bg-slate-300 hover:bg-slate-400"
                                       }`}
                                   >
@@ -5221,7 +5221,7 @@ export default function UserCreationPage() {
                     <button
                       type="button"
                       onClick={() => setActiveTab("doctor")}
-                      className="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg bg-emerald-600 text-white text-sm font-semibold shadow-md hover:bg-emerald-700 transition-colors self-start sm:self-auto"
+                      className="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg bg-violet-600 text-white text-sm font-semibold shadow-md hover:bg-emerald-700 transition-colors self-start sm:self-auto"
                     >
                       <Plus className="w-4 h-4" />
                       Create CRC User
@@ -5879,7 +5879,7 @@ export default function UserCreationPage() {
                                       <button
                                         type="button"
                                         onClick={() => handleOpenEditStudyUser(a)}
-                                        className="shrink-0 px-3 py-1.5 rounded-lg bg-emerald-600 text-white text-xs font-semibold hover:bg-emerald-700 transition-colors"
+                                        className="shrink-0 px-3 py-1.5 rounded-lg bg-violet-600 text-white text-xs font-semibold hover:bg-emerald-700 transition-colors"
                                       >
                                         Edit & update
                                       </button>
@@ -5906,7 +5906,7 @@ export default function UserCreationPage() {
                         <button
                           type="submit"
                           disabled={editLoading}
-                          className="px-6 py-2.5 rounded-xl bg-gradient-to-r from-emerald-600 to-teal-600 text-white font-semibold hover:from-emerald-700 hover:to-teal-700 transition-all shadow-lg shadow-emerald-300/40 hover:shadow-xl hover:shadow-emerald-400/50 disabled:opacity-50 disabled:cursor-not-allowed text-sm"
+                          className="px-6 py-2.5 rounded-xl bg-gradient-to-r from-violet-600 to-purple-500 text-white font-semibold hover:from-violet-700 hover:to-purple-600 transition-all shadow-lg shadow-violet-300/40 hover:shadow-xl hover:shadow-violet-400/50 disabled:opacity-50 disabled:cursor-not-allowed text-sm"
                         >
                           {editLoading ? (
                             <span className="flex items-center gap-2">
@@ -6048,7 +6048,7 @@ export default function UserCreationPage() {
                                 ],
                               }))
                             }
-                            className="inline-flex items-center px-3 py-1.5 rounded-lg bg-emerald-600 text-white text-xs font-semibold hover:bg-emerald-700 shadow-sm"
+                            className="inline-flex items-center px-3 py-1.5 rounded-lg bg-violet-600 text-white text-xs font-semibold hover:bg-emerald-700 shadow-sm"
                           >
                             + Add Milestone
                           </button>
@@ -6316,7 +6316,7 @@ export default function UserCreationPage() {
                               ],
                             }))
                           }
-                          className="inline-flex items-center gap-2 px-4 py-2 mt-4 bg-emerald-600 text-white rounded-lg hover:bg-emerald-700 transition-colors text-sm font-semibold"
+                          className="inline-flex items-center gap-2 px-4 py-2 mt-4 bg-violet-600 text-white rounded-lg hover:bg-emerald-700 transition-colors text-sm font-semibold"
                         >
                           <Plus className="w-4 h-4" />
                           Add Visit Amount
@@ -6339,7 +6339,7 @@ export default function UserCreationPage() {
                     )}
                     <div className="flex justify-end gap-3 pt-4 border-t border-slate-200">
                       <button type="button" onClick={handleCloseEditStudyUser} className="px-4 py-2 rounded-lg border border-slate-300 text-slate-700 font-medium hover:bg-slate-50 text-sm">Cancel</button>
-                      <button type="submit" disabled={studyUserEditLoading} className="px-4 py-2 rounded-lg bg-emerald-600 text-white font-medium hover:bg-emerald-700 disabled:opacity-50 text-sm">
+                      <button type="submit" disabled={studyUserEditLoading} className="px-4 py-2 rounded-lg bg-violet-600 text-white font-medium hover:bg-emerald-700 disabled:opacity-50 text-sm">
                         {studyUserEditLoading ? "Saving..." : "Save updates"}
                       </button>
                     </div>

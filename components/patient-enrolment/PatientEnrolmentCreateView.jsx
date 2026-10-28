@@ -325,7 +325,7 @@ export default function PatientEnrolmentCreateView() {
 
           {success && (
             <div className={PE_ALERT_SUCCESS_CLASS}>
-              <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-emerald-600 text-sm font-bold text-white">
+              <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-violet-600 text-sm font-bold text-white">
                 ✓
               </div>
               <p className="flex-1 font-medium text-emerald-900">{success}</p>

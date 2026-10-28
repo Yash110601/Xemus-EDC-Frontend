@@ -55,8 +55,8 @@ function ConsentStepper({ step, maxStep, hasQuiz }) {
             <div
               className={cn(
                 "flex h-8 w-8 shrink-0 items-center justify-center rounded-full text-xs font-bold transition-colors",
-                done && "bg-emerald-600 text-white",
-                active && !done && "bg-emerald-100 text-emerald-800 ring-2 ring-emerald-500/30",
+                done && "bg-violet-600 text-white",
+                active && !done && "bg-emerald-100 text-emerald-800 ring-2 ring-violet-500/30",
                 !active && !done && "bg-slate-100 text-slate-400",
               )}
             >
@@ -480,7 +480,7 @@ function ParticipantConsentInner() {
               <div className="px-6 py-4">
                 <Button
                   type="button"
-                  className="h-11 rounded-xl bg-gradient-to-r from-emerald-600 to-teal-600 px-5 font-semibold text-white shadow-md shadow-emerald-900/10 hover:from-emerald-700 hover:to-teal-700"
+                  className="h-11 rounded-xl bg-gradient-to-r from-violet-600 to-purple-500 px-5 font-semibold text-white shadow-md shadow-violet-900/15 hover:from-violet-700 hover:to-purple-600"
                   disabled={downloading}
                   onClick={handleDownload}
                 >
@@ -869,7 +869,7 @@ function ParticipantConsentInner() {
                     {step < maxStep ? (
                       <Button
                         type="button"
-                        className="h-11 flex-1 rounded-xl bg-gradient-to-r from-emerald-600 to-teal-600 px-5 font-semibold text-white shadow-md shadow-emerald-900/10 hover:from-emerald-700 hover:to-teal-700 sm:flex-none"
+                        className="h-11 flex-1 rounded-xl bg-gradient-to-r from-violet-600 to-purple-500 px-5 font-semibold text-white shadow-md shadow-violet-900/15 hover:from-violet-700 hover:to-purple-600 sm:flex-none"
                         onClick={() => setStep((s) => s + 1)}
                         disabled={
                           (step === 0 && !allVideosWatched) ||
@@ -882,7 +882,7 @@ function ParticipantConsentInner() {
                     ) : (
                       <Button
                         type="button"
-                        className="h-11 flex-1 rounded-xl bg-gradient-to-r from-emerald-600 to-teal-600 px-5 font-semibold text-white shadow-md shadow-emerald-900/10 hover:from-emerald-700 hover:to-teal-700 sm:flex-none"
+                        className="h-11 flex-1 rounded-xl bg-gradient-to-r from-violet-600 to-purple-500 px-5 font-semibold text-white shadow-md shadow-violet-900/15 hover:from-violet-700 hover:to-purple-600 sm:flex-none"
                         onClick={handleSubmit}
                         disabled={
                           submitting ||

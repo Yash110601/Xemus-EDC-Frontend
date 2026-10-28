@@ -160,7 +160,7 @@ const CRFViewer = ({
               key={section.id}
               onClick={() => setActiveSection(section.id)}
               className={`px-4 py-2 rounded-t-lg font-medium transition-colors whitespace-nowrap ${activeSection === section.id
-                  ? "bg-emerald-600 text-white"
+                  ? "bg-violet-600 text-white"
                   : "bg-slate-100 text-slate-700 hover:bg-slate-200"
                 }`}
             >

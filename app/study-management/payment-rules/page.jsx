@@ -92,7 +92,7 @@ function EmptyRulesState({ canEdit, onApplyTemplate, onAddRule, applyingTemplate
             )}
             Apply template
           </Button>
-          <Button type="button" size="sm" onClick={onAddRule} className="rounded-xl bg-emerald-600 hover:bg-emerald-700">
+          <Button type="button" size="sm" onClick={onAddRule} className="rounded-xl bg-violet-600 hover:bg-violet-700">
             <Plus className="mr-1.5 h-3.5 w-3.5" />
             Add rule
           </Button>
@@ -516,7 +516,7 @@ function PaymentRulesPageContent() {
                 size="sm"
                 disabled={!selectedStudyId}
                 onClick={openCreate}
-                className="rounded-xl bg-emerald-600 shadow-sm hover:bg-emerald-700"
+                className="rounded-xl bg-violet-600 shadow-sm hover:bg-emerald-700"
               >
                 <Plus className="mr-1.5 h-3.5 w-3.5" />
                 Add rule
