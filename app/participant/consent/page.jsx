@@ -437,7 +437,7 @@ function ParticipantConsentInner() {
             <BrandLogo className="h-9 w-auto shrink-0 sm:h-10" />
             <div className="min-w-0">
               <p className="truncate text-base font-bold tracking-tight text-slate-900 sm:text-lg">
-                {APP_BRANDING?.productName || "Xemus"}
+                {APP_BRANDING?.productName || "Company"}
               </p>
               <p className="truncate text-xs text-slate-500">Electronic informed consent</p>
             </div>

@@ -9,7 +9,7 @@ export default function NotFound() {
       <p className="text-sm font-semibold uppercase tracking-[0.14em] text-emerald-600">404</p>
       <h1 className="mt-2 text-2xl font-bold text-slate-900 sm:text-3xl">Page not found</h1>
       <p className="mt-3 max-w-md text-sm leading-relaxed text-slate-600">
-        This link does not match a screen in Xemus. Use the menu to open a module, or return to the
+        This link does not match a screen in Company. Use the menu to open a module, or return to the
         dashboard.
       </p>
       <div className="mt-8 flex flex-col gap-3 sm:flex-row">

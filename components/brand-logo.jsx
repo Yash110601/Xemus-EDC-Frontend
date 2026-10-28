@@ -10,7 +10,10 @@ const HEIGHT = {
   card: "h-[3.75rem]",
 }
 
-/** Xemus mark — square monogram (full name lives in the wordmark text). */
+const BRAND_NAME = APP_BRANDING.productName
+const BRAND_MARK = String(BRAND_NAME || "C").trim().charAt(0).toUpperCase() || "C"
+
+/** Brand mark — square monogram (full name lives in the wordmark text). */
 export function XemusMark({ className, variant = "color" }) {
   const fill = variant === "light" ? "#EDE7F6" : "#3D2F63"
   const ink = variant === "light" ? "#3D2F63" : "#FFFFFF"
@@ -30,18 +33,18 @@ export function XemusMark({ className, variant = "color" }) {
         fontWeight="800"
         letterSpacing="-0.06em"
       >
-        X
+        {BRAND_MARK}
       </text>
     </svg>
   )
 }
 
-/** Full lockup: X mark + Xemus wordmark. */
+/** Full lockup: mark + product wordmark. */
 export function XemusWordmark({ className, variant = "color", markClassName, textClassName }) {
   const textColor = variant === "light" ? "text-white" : "text-[#3D2F63]"
 
   return (
-    <div className={cn("inline-flex items-center gap-2.5", className)} role="img" aria-label="Xemus">
+    <div className={cn("inline-flex items-center gap-2.5", className)} role="img" aria-label={BRAND_NAME}>
       <XemusMark variant={variant} className={cn("h-9 w-9 shrink-0 sm:h-10 sm:w-10", markClassName)} />
       <span
         className={cn(
@@ -50,7 +53,7 @@ export function XemusWordmark({ className, variant = "color", markClassName, tex
           textClassName,
         )}
       >
-        Xemus
+        {BRAND_NAME}
       </span>
     </div>
   )
